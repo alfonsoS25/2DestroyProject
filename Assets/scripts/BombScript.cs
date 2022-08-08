@@ -22,11 +22,6 @@ public class BombScript : MonoBehaviour
 
     private float delay=0.4f;
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -44,7 +39,6 @@ public class BombScript : MonoBehaviour
             delay += Time.deltaTime;
         }
     }
-
     public void ChangePower(int power)
     {
         Power = power;

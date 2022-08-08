@@ -6,7 +6,6 @@ public class DestroyOnSeconds : MonoBehaviour
     [SerializeField]
     public float Seconds;
 
-
     [SerializeField]
     private GameObject Camerapos;
 
@@ -14,12 +13,10 @@ public class DestroyOnSeconds : MonoBehaviour
     private float OffsetX;
     [SerializeField]
     private float OffsetY;
-
     private float timer = 0;
     void Start()
     {
         Camerapos = Camera.main.gameObject;
-
     }
 
     // Update is called once per frame
@@ -55,7 +52,7 @@ public class DestroyOnSeconds : MonoBehaviour
         }
     }
 
-        void destroynow()
+    void destroynow()
     {
         timer = 0;
         this.gameObject.SetActive(false);

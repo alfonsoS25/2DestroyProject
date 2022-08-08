@@ -5,16 +5,11 @@ using UnityEngine;
 public class ParticleManager : MonoBehaviour
 {
     [Header("Pool")]
-
     public static ParticleManager SharedInstance;
-
     public List<GameObject> pooledObjects;
-
     public GameObject objectpool;
     public GameObject BlocksHolder;
-
     public int amountToPool;
-
 
     private void Start()
     {
@@ -42,19 +37,8 @@ public class ParticleManager : MonoBehaviour
         return null;
     }
 
-
     private void Awake()
     {
         SharedInstance = this;
     }
-
-
-    [Header("particulas")]
-
-
-    [SerializeField]
-    public int ParticleCount = 0;
-
-    public int MaxParticleCount;
-
 }

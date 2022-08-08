@@ -74,7 +74,6 @@ public class BlockScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         if (rig.velocity.x > breakForce || rig.velocity.x < -breakForce||rig.velocity.y > breakForce || rig.velocity.y < -breakForce )
         {
             DestroyIntoBlocks();

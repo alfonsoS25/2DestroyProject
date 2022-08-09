@@ -176,6 +176,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1335199
 Rigidbody2D:
   serializedVersion: 4
@@ -327,6 +328,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &4116648
 Rigidbody2D:
   serializedVersion: 4
@@ -478,6 +480,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &5860423
 Rigidbody2D:
   serializedVersion: 4
@@ -629,6 +632,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &10216855
 Rigidbody2D:
   serializedVersion: 4
@@ -780,6 +784,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &17373590
 Rigidbody2D:
   serializedVersion: 4
@@ -931,6 +936,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &36200357
 Rigidbody2D:
   serializedVersion: 4
@@ -1344,6 +1350,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &52622429
 Rigidbody2D:
   serializedVersion: 4
@@ -1495,6 +1502,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &92295301
 Rigidbody2D:
   serializedVersion: 4
@@ -1646,6 +1654,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &93277551
 Rigidbody2D:
   serializedVersion: 4
@@ -1797,6 +1806,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &109022647
 Rigidbody2D:
   serializedVersion: 4
@@ -1948,6 +1958,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &141658424
 Rigidbody2D:
   serializedVersion: 4
@@ -2178,6 +2189,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &144500964
 Rigidbody2D:
   serializedVersion: 4
@@ -2329,6 +2341,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &177535449
 Rigidbody2D:
   serializedVersion: 4
@@ -2480,6 +2493,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &183994278
 Rigidbody2D:
   serializedVersion: 4
@@ -2863,6 +2877,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &190967175
 Rigidbody2D:
   serializedVersion: 4
@@ -3014,6 +3029,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &206160869
 Rigidbody2D:
   serializedVersion: 4
@@ -3165,6 +3181,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &208581176
 Rigidbody2D:
   serializedVersion: 4
@@ -3316,6 +3333,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &212495803
 Rigidbody2D:
   serializedVersion: 4
@@ -3467,6 +3485,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &225386170
 Rigidbody2D:
   serializedVersion: 4
@@ -3762,6 +3781,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &235992594
 Rigidbody2D:
   serializedVersion: 4
@@ -3913,6 +3933,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &243707121
 Rigidbody2D:
   serializedVersion: 4
@@ -4064,6 +4085,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &253229317
 Rigidbody2D:
   serializedVersion: 4
@@ -4326,6 +4348,11 @@ MonoBehaviour:
   objectpool: {fileID: 7592496645012256594, guid: d9ae5a46f6da18d45b7ce909ae9de9a2, type: 3}
   BlocksHolder: {fileID: 716097136}
   amountToPool: 250
+  blockSprites:
+  - {fileID: 21300000, guid: 99df98a20080dd94cb33d1f66266ad0e, type: 3}
+  - {fileID: 21300000, guid: 1f783f31b9b30e94faadbfe48af3724f, type: 3}
+  - {fileID: 21300000, guid: 3b2d299cd3fed884b83fd2f387761842, type: 3}
+  - {fileID: 21300000, guid: 51aec8ef70fd77c4fa2c82739f049fa8, type: 3}
 --- !u!4 &267128041
 Transform:
   m_ObjectHideFlags: 0
@@ -4394,6 +4421,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &275800839
 Rigidbody2D:
   serializedVersion: 4
@@ -4545,6 +4573,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &279033138
 Rigidbody2D:
   serializedVersion: 4
@@ -4958,6 +4987,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &307070409
 Rigidbody2D:
   serializedVersion: 4
@@ -5109,6 +5139,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &315494397
 Rigidbody2D:
   serializedVersion: 4
@@ -5260,6 +5291,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &336966124
 Rigidbody2D:
   serializedVersion: 4
@@ -5490,6 +5522,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &375305529
 Rigidbody2D:
   serializedVersion: 4
@@ -5641,6 +5674,7 @@ MonoBehaviour:
   breakForce: 20
   breakForceCollision: 20
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &396134524
 Rigidbody2D:
   serializedVersion: 4
@@ -5792,6 +5826,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &397113711
 Rigidbody2D:
   serializedVersion: 4
@@ -5943,6 +5978,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &397295309
 Rigidbody2D:
   serializedVersion: 4
@@ -6094,6 +6130,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &412138767
 Rigidbody2D:
   serializedVersion: 4
@@ -6376,6 +6413,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &448098283
 Rigidbody2D:
   serializedVersion: 4
@@ -6527,6 +6565,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &454421416
 Rigidbody2D:
   serializedVersion: 4
@@ -6809,6 +6848,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &489515560
 Rigidbody2D:
   serializedVersion: 4
@@ -6960,6 +7000,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &495770943
 Rigidbody2D:
   serializedVersion: 4
@@ -7111,6 +7152,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &500654791
 Rigidbody2D:
   serializedVersion: 4
@@ -7262,6 +7304,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &501528782
 Rigidbody2D:
   serializedVersion: 4
@@ -7413,6 +7456,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &502210453
 Rigidbody2D:
   serializedVersion: 4
@@ -7564,6 +7608,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &518007007
 Rigidbody2D:
   serializedVersion: 4
@@ -7715,6 +7760,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &520118676
 Rigidbody2D:
   serializedVersion: 4
@@ -7866,6 +7912,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &520672571
 Rigidbody2D:
   serializedVersion: 4
@@ -8017,6 +8064,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &533586888
 Rigidbody2D:
   serializedVersion: 4
@@ -8168,6 +8216,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &534748083
 Rigidbody2D:
   serializedVersion: 4
@@ -8319,6 +8368,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &560634200
 Rigidbody2D:
   serializedVersion: 4
@@ -8470,6 +8520,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &581793767
 Rigidbody2D:
   serializedVersion: 4
@@ -9029,6 +9080,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &609026033
 Rigidbody2D:
   serializedVersion: 4
@@ -9180,6 +9232,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &613609589
 Rigidbody2D:
   serializedVersion: 4
@@ -9331,6 +9384,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &615170432
 Rigidbody2D:
   serializedVersion: 4
@@ -9482,6 +9536,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &625494924
 Rigidbody2D:
   serializedVersion: 4
@@ -9633,6 +9688,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &629641530
 Rigidbody2D:
   serializedVersion: 4
@@ -9836,6 +9892,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &635329776
 Rigidbody2D:
   serializedVersion: 4
@@ -9987,6 +10044,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &664937140
 Rigidbody2D:
   serializedVersion: 4
@@ -10138,6 +10196,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &675639782
 Rigidbody2D:
   serializedVersion: 4
@@ -10289,6 +10348,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &675916935
 Rigidbody2D:
   serializedVersion: 4
@@ -10440,6 +10500,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &689370968
 Rigidbody2D:
   serializedVersion: 4
@@ -10752,6 +10813,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &734421820
 Rigidbody2D:
   serializedVersion: 4
@@ -10903,6 +10965,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &739637646
 Rigidbody2D:
   serializedVersion: 4
@@ -11054,6 +11117,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &771010710
 Rigidbody2D:
   serializedVersion: 4
@@ -11205,6 +11269,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &780381609
 Rigidbody2D:
   serializedVersion: 4
@@ -11356,6 +11421,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &805290485
 Rigidbody2D:
   serializedVersion: 4
@@ -11507,6 +11573,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &822615680
 Rigidbody2D:
   serializedVersion: 4
@@ -11658,6 +11725,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &852394702
 Rigidbody2D:
   serializedVersion: 4
@@ -11809,6 +11877,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &862452621
 Rigidbody2D:
   serializedVersion: 4
@@ -11960,6 +12029,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &864105207
 Rigidbody2D:
   serializedVersion: 4
@@ -12111,6 +12181,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &865272040
 Rigidbody2D:
   serializedVersion: 4
@@ -12262,6 +12333,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &868875733
 Rigidbody2D:
   serializedVersion: 4
@@ -12413,6 +12485,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &871892323
 Rigidbody2D:
   serializedVersion: 4
@@ -12564,6 +12637,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &877052470
 Rigidbody2D:
   serializedVersion: 4
@@ -12715,6 +12789,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &878710179
 Rigidbody2D:
   serializedVersion: 4
@@ -13102,6 +13177,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &905517936
 Rigidbody2D:
   serializedVersion: 4
@@ -13253,6 +13329,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &935661217
 Rigidbody2D:
   serializedVersion: 4
@@ -13404,6 +13481,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &943811177
 Rigidbody2D:
   serializedVersion: 4
@@ -13555,6 +13633,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &943933912
 Rigidbody2D:
   serializedVersion: 4
@@ -13837,6 +13916,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &956540124
 Rigidbody2D:
   serializedVersion: 4
@@ -14132,6 +14212,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &973865630
 Rigidbody2D:
   serializedVersion: 4
@@ -14283,6 +14364,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &975732068
 Rigidbody2D:
   serializedVersion: 4
@@ -14696,6 +14778,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &990939054
 Rigidbody2D:
   serializedVersion: 4
@@ -14847,6 +14930,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &995323398
 Rigidbody2D:
   serializedVersion: 4
@@ -14998,6 +15082,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1007109808
 Rigidbody2D:
   serializedVersion: 4
@@ -15149,6 +15234,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1019459305
 Rigidbody2D:
   serializedVersion: 4
@@ -15575,6 +15661,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1060872188
 Rigidbody2D:
   serializedVersion: 4
@@ -15726,6 +15813,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1063357321
 Rigidbody2D:
   serializedVersion: 4
@@ -15877,6 +15965,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1077798096
 Rigidbody2D:
   serializedVersion: 4
@@ -16028,6 +16117,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1079882440
 Rigidbody2D:
   serializedVersion: 4
@@ -16179,6 +16269,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1080926439
 Rigidbody2D:
   serializedVersion: 4
@@ -16330,6 +16421,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1084517038
 Rigidbody2D:
   serializedVersion: 4
@@ -16481,6 +16573,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1088026179
 Rigidbody2D:
   serializedVersion: 4
@@ -16632,6 +16725,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1097400919
 Rigidbody2D:
   serializedVersion: 4
@@ -16783,6 +16877,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1119249843
 Rigidbody2D:
   serializedVersion: 4
@@ -16934,6 +17029,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1120614507
 Rigidbody2D:
   serializedVersion: 4
@@ -17085,6 +17181,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1130716731
 Rigidbody2D:
   serializedVersion: 4
@@ -17236,6 +17333,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1133523380
 Rigidbody2D:
   serializedVersion: 4
@@ -17387,6 +17485,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1134889876
 Rigidbody2D:
   serializedVersion: 4
@@ -17617,6 +17716,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1149426766
 Rigidbody2D:
   serializedVersion: 4
@@ -17768,6 +17868,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1149739761
 Rigidbody2D:
   serializedVersion: 4
@@ -17919,6 +18020,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1152836683
 Rigidbody2D:
   serializedVersion: 4
@@ -18426,6 +18528,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1187915338
 Rigidbody2D:
   serializedVersion: 4
@@ -18577,6 +18680,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1209533034
 Rigidbody2D:
   serializedVersion: 4
@@ -18728,6 +18832,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1232176974
 Rigidbody2D:
   serializedVersion: 4
@@ -18879,6 +18984,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1241940309
 Rigidbody2D:
   serializedVersion: 4
@@ -19030,6 +19136,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1244815945
 Rigidbody2D:
   serializedVersion: 4
@@ -19312,6 +19419,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1249400714
 Rigidbody2D:
   serializedVersion: 4
@@ -19463,6 +19571,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1257370452
 Rigidbody2D:
   serializedVersion: 4
@@ -19614,6 +19723,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1281622492
 Rigidbody2D:
   serializedVersion: 4
@@ -19765,6 +19875,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &1284671344
 Rigidbody2D:
   serializedVersion: 4
@@ -19916,6 +20027,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &1302773067
 Rigidbody2D:
   serializedVersion: 4
@@ -20198,6 +20310,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1331077837
 Rigidbody2D:
   serializedVersion: 4
@@ -20349,6 +20462,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1356703292
 Rigidbody2D:
   serializedVersion: 4
@@ -20500,6 +20614,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1371469930
 Rigidbody2D:
   serializedVersion: 4
@@ -20651,6 +20766,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1386843149
 Rigidbody2D:
   serializedVersion: 4
@@ -20881,6 +20997,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1414527113
 Rigidbody2D:
   serializedVersion: 4
@@ -21032,6 +21149,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1427222993
 Rigidbody2D:
   serializedVersion: 4
@@ -21329,6 +21447,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1442064002
 Rigidbody2D:
   serializedVersion: 4
@@ -21480,6 +21599,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1450045587
 Rigidbody2D:
   serializedVersion: 4
@@ -21631,6 +21751,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1463237634
 Rigidbody2D:
   serializedVersion: 4
@@ -21782,6 +21903,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1467411355
 Rigidbody2D:
   serializedVersion: 4
@@ -21933,6 +22055,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1470148306
 Rigidbody2D:
   serializedVersion: 4
@@ -22084,6 +22207,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &1472970668
 Rigidbody2D:
   serializedVersion: 4
@@ -22235,6 +22359,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1485099105
 Rigidbody2D:
   serializedVersion: 4
@@ -22386,6 +22511,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1495484869
 Rigidbody2D:
   serializedVersion: 4
@@ -22537,6 +22663,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1499656065
 Rigidbody2D:
   serializedVersion: 4
@@ -22688,6 +22815,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1502250132
 Rigidbody2D:
   serializedVersion: 4
@@ -22839,6 +22967,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &1522766025
 Rigidbody2D:
   serializedVersion: 4
@@ -22990,6 +23119,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1566028307
 Rigidbody2D:
   serializedVersion: 4
@@ -23351,6 +23481,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &1622363598
 Rigidbody2D:
   serializedVersion: 4
@@ -23502,6 +23633,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1627049489
 Rigidbody2D:
   serializedVersion: 4
@@ -23653,6 +23785,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1657423528
 Rigidbody2D:
   serializedVersion: 4
@@ -23804,6 +23937,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1660626575
 Rigidbody2D:
   serializedVersion: 4
@@ -23955,6 +24089,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1661951877
 Rigidbody2D:
   serializedVersion: 4
@@ -24237,6 +24372,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1680216958
 Rigidbody2D:
   serializedVersion: 4
@@ -24467,6 +24603,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1684505260
 Rigidbody2D:
   serializedVersion: 4
@@ -24618,6 +24755,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1691490098
 Rigidbody2D:
   serializedVersion: 4
@@ -24769,6 +24907,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1693843895
 Rigidbody2D:
   serializedVersion: 4
@@ -24920,6 +25059,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1698299686
 Rigidbody2D:
   serializedVersion: 4
@@ -25150,6 +25290,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1760565312
 Rigidbody2D:
   serializedVersion: 4
@@ -25301,6 +25442,7 @@ MonoBehaviour:
   breakForce: 1
   breakForceCollision: 1
   pointM: {fileID: 0}
+  BlockClass: 0
 --- !u!50 &1775739185
 Rigidbody2D:
   serializedVersion: 4
@@ -25649,6 +25791,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1831609760
 Rigidbody2D:
   serializedVersion: 4
@@ -25800,6 +25943,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1868670455
 Rigidbody2D:
   serializedVersion: 4
@@ -25951,6 +26095,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1886372705
 Rigidbody2D:
   serializedVersion: 4
@@ -26379,6 +26524,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &1991782264
 Rigidbody2D:
   serializedVersion: 4
@@ -26530,6 +26676,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &1992710578
 Rigidbody2D:
   serializedVersion: 4
@@ -26827,6 +26974,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &2001107219
 Rigidbody2D:
   serializedVersion: 4
@@ -26978,6 +27126,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &2006343250
 Rigidbody2D:
   serializedVersion: 4
@@ -27129,6 +27278,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &2022102043
 Rigidbody2D:
   serializedVersion: 4
@@ -27411,6 +27561,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &2051563725
 Rigidbody2D:
   serializedVersion: 4
@@ -27562,6 +27713,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &2074026802
 Rigidbody2D:
   serializedVersion: 4
@@ -27713,6 +27865,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &2078756811
 Rigidbody2D:
   serializedVersion: 4
@@ -27995,6 +28148,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &2086919626
 Rigidbody2D:
   serializedVersion: 4
@@ -28146,6 +28300,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 1
 --- !u!50 &2117650306
 Rigidbody2D:
   serializedVersion: 4
@@ -28297,6 +28452,7 @@ MonoBehaviour:
   breakForce: 8
   breakForceCollision: 5
   pointM: {fileID: 0}
+  BlockClass: 2
 --- !u!50 &2118055559
 Rigidbody2D:
   serializedVersion: 4
@@ -28448,6 +28604,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &2122871898
 Rigidbody2D:
   serializedVersion: 4
@@ -28599,6 +28756,7 @@ MonoBehaviour:
   breakForce: 10
   breakForceCollision: 10
   pointM: {fileID: 0}
+  BlockClass: 3
 --- !u!50 &2138038011
 Rigidbody2D:
   serializedVersion: 4

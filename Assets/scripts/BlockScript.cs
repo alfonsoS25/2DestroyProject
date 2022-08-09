@@ -24,6 +24,9 @@ public class BlockScript : MonoBehaviour
 
     bool IsDestroyed = false;
 
+    [SerializeField]
+    private int BlockClass;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,10 +104,12 @@ public class BlockScript : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
+                var thisSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
                 GameObject BrokenBlock = particlemann.GetPooledObject();
                 if (BrokenBlock != null)
                 {
                     BrokenBlock.GetComponent<SpriteRenderer>().color = this.gameObject.GetComponent<SpriteRenderer>().color;
+                    BrokenBlock.GetComponent<SpriteRenderer>().sprite = particlemann.SelectBlockSprite(BlockClass);
                     BrokenBlock.transform.position = transform.position;
                     BrokenBlock.transform.rotation = BrokenBlock.transform.rotation;
                     BrokenBlock.SetActive(true);

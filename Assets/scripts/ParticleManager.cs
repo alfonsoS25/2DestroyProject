@@ -11,6 +11,9 @@ public class ParticleManager : MonoBehaviour
     public GameObject BlocksHolder;
     public int amountToPool;
 
+    [SerializeField]
+    private Sprite[] blockSprites;
+
     private void Start()
     {
         pooledObjects = new List<GameObject>();
@@ -35,6 +38,23 @@ public class ParticleManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public Sprite SelectBlockSprite(int BlockNum)
+    {
+        Sprite Block = blockSprites[0];
+        switch(BlockNum)
+        {
+            case 0:     Block= blockSprites[0];
+                break;
+            case 1:     Block= blockSprites[1];
+                break;
+            case 2:     Block = blockSprites[2];
+                break;
+            case 3:     Block = blockSprites[3];
+                break;
+        }
+        return Block;
     }
 
     private void Awake()

@@ -14,8 +14,7 @@ public class Misile : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-           rig.velocity =  transform.right * Speed;
-        Debug.Log(transform.right * 15);
+           rig.velocity = transform.right * Speed;
     }
 
 

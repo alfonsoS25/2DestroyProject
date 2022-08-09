@@ -22,6 +22,7 @@ public class BombScript : MonoBehaviour
 
     private float delay=0.4f;
 
+
     // Update is called once per frame
     void Update()
     {

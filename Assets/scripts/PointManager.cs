@@ -26,8 +26,6 @@ public class PointManager : MonoBehaviour
 
     private float positiondelay = 0;
 
-
-
     private void Start()
     {
         float BarSize = 0;

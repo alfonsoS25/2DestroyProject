@@ -4334,7 +4334,7 @@ MonoBehaviour:
   pooledObjects: []
   objectpool: {fileID: 7592496645012256594, guid: d9ae5a46f6da18d45b7ce909ae9de9a2, type: 3}
   BlocksHolder: {fileID: 716097136}
-  amountToPool: 250
+  amountToPool: 100
   blockSprites:
   - {fileID: 21300000, guid: 99df98a20080dd94cb33d1f66266ad0e, type: 3}
   - {fileID: 21300000, guid: 1f783f31b9b30e94faadbfe48af3724f, type: 3}

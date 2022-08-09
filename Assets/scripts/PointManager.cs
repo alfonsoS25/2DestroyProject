@@ -22,6 +22,10 @@ public class PointManager : MonoBehaviour
     [SerializeField]
     private float PointsBarSizeX = 0;
 
+    private float movepositionX = 0;
+
+    private float positiondelay = 0;
+
 
 
     private void Start()
@@ -31,9 +35,14 @@ public class PointManager : MonoBehaviour
         {
             BarSize++;
         }
+
         PointsBarSize = PointsBarSize / BarSize;
-        Debug.Log(PointsBarSize);
         PointsBar.transform.localScale = new Vector3(0,1,0);
+
+        movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / BarSize;
+        Vector3 positionRect = PointsBar.GetComponent<RectTransform>().anchoredPosition;
+        positionRect.x = positionRect.x - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
+        PointsBar.transform.localPosition = positionRect;
 
     }
     public void SumPoints(int Points)
@@ -47,6 +56,10 @@ public class PointManager : MonoBehaviour
     {
         PointsBarSizeX += PointsBarSize;
         PointsBar.transform.localScale = new Vector3(PointsBarSizeX, 1, 0);
+        positiondelay+= movepositionX;
+        Vector3 position = PointsBar.GetComponent<RectTransform>().anchoredPosition;
+        position.x = positiondelay - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
+        PointsBar.transform.localPosition = position;
     }
 
 }

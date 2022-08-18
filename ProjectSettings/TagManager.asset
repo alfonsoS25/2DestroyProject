@@ -11,6 +11,7 @@ TagManager:
   - Block
   - PointCounter
   - SmallBlock
+  - DotMan
   layers:
   - Default
   - TransparentFX

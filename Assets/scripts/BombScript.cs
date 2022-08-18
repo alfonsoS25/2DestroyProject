@@ -18,6 +18,9 @@ public class BombScript : MonoBehaviour
     private GameObject wrekingBall;
 
     [SerializeField]
+    private GameObject Grenade;
+
+    [SerializeField]
     private int Power;
 
     private float delay=0.4f;
@@ -56,14 +59,22 @@ public class BombScript : MonoBehaviour
         switch (Power)
         {
             case 0:
-                //transform.position = worldPosition;
+                var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
+                //Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
+                //Vector3 MisileDir = Input.mousePosition - MisilePos;
+
+               // Debug.Log(MisileDir);
+               // float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
+               // GrenadeClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
+                //GrenadeClone.GetComponent<Rigidbody2D>().velocity = (MisileDir/20);
+
+                /*generate a misile
                 var MisileClone = Instantiate(Bomb, transform.position, transform.rotation);
-                //Debug.Log(TouchPos);
                 Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
                 Vector3 MisileDir = Input.mousePosition - MisilePos;
                 float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
-                
+                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);*/
+
                 break;
             case 1:
                 var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);

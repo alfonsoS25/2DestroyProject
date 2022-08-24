@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonSelector : MonoBehaviour
@@ -11,10 +13,14 @@ public class ButtonSelector : MonoBehaviour
     private Transform UiRoot;
 
 
+    [SerializeField]
+    private GameObject ExplosionHolder;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ExplosionHolder = Instantiate(ExplosionParticleButton, UiRoot);
+        ExplosionHolder.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -29,14 +35,23 @@ public class ButtonSelector : MonoBehaviour
             ExploteTouch();
         }
     }
+    IEnumerator setOff()
+    {
+        yield return new WaitForSeconds(1);
+        ExplosionHolder.SetActive(false);
+    }
     public void Explote()
     {
-        Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 MisileDir = Input.mousePosition - MisilePos;
+        ExplosionHolder.SetActive(true);
+        Vector3 Pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 InputPos = Input.mousePosition - Pos;
         Vector3 ExplosionPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Instantiate(ExplosionParticle, ExplosionPos, Quaternion.identity, UiRoot);
-        Instantiate(ExplosionParticleButton, ExplosionPos, Quaternion.identity, UiRoot);
+        ExplosionHolder.transform.position = ExplosionPos;
+        // Instantiate(ExplosionParticleButton, ExplosionPos, Quaternion.identity, UiRoot);
+        StartCoroutine(setOff());
     }
+
+    
 
     public void ExploteTouch()
     {

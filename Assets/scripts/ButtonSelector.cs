@@ -4,6 +4,8 @@ public class ButtonSelector : MonoBehaviour
 {
     [SerializeField]
     private GameObject ExplosionParticle;
+    [SerializeField]
+    private GameObject ExplosionParticleButton;
 
     [SerializeField]
     private Transform UiRoot;
@@ -22,6 +24,10 @@ public class ButtonSelector : MonoBehaviour
         {
             Explote();
         }
+        if (Input.touchCount > 0)
+        {
+            ExploteTouch();
+        }
     }
     public void Explote()
     {
@@ -29,6 +35,13 @@ public class ButtonSelector : MonoBehaviour
         Vector3 MisileDir = Input.mousePosition - MisilePos;
         Vector3 ExplosionPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Instantiate(ExplosionParticle, ExplosionPos, Quaternion.identity, UiRoot);
+        Instantiate(ExplosionParticleButton, ExplosionPos, Quaternion.identity, UiRoot);
+    }
 
+    public void ExploteTouch()
+    {
+        Touch touch = Input.GetTouch(0);
+        Vector3 TouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+        Instantiate(ExplosionParticle, TouchPos, Quaternion.identity, UiRoot);
     }
 }

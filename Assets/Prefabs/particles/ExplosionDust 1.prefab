@@ -982,9 +982,9 @@ ParticleSystem:
       time: 0
       countCurve:
         serializedVersion: 2
-        minMaxState: 0
-        scalar: 25
-        minScalar: 30
+        minMaxState: 3
+        scalar: 18
+        minScalar: 8
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -1378,8 +1378,8 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 18697
-        ctime2: 35466
+        ctime1: 25443
+        ctime2: 38936
         ctime3: 0
         ctime4: 0
         ctime5: 0

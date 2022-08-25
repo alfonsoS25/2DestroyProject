@@ -6,23 +6,35 @@ using UnityEngine.UI;
 public class ButtonSelect : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Explosion;
+    private GameObject[] BrokenButton;
 
     [SerializeField]
-    private Button[] button = new Button[3];
+    private Transform UiRoot;
+
+    [SerializeField]
+    private string[] ListOfScreens;
 
 
-    private void Start()
+    public void StringToInt(string frase)
     {
+        for (int i = 0; i < ListOfScreens.Length; i++)
+        {
+            if (ListOfScreens[i].Contains(frase))
+            {
+                GenerateExplosion(i);
+            }
+        }
     }
-    public void InstantiateExplotion(int ButtonNum)
-    {
-       // ExplosionHolder.SetActive(true);
-        var ButtonRect = button[ButtonNum].GetComponent<RectTransform>().rect;
-        Vector3 ButtonPos = new Vector3(ButtonRect.position.x, ButtonRect.position.y,0);
-        //var clone = Instantiate(Explosion, ButtonPos,Quaternion.identity,button[ButtonNum].transform);
 
-       // ExplosionHolder.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
-        //ExplosionHolder.GetComponent<RectTransform>().anchoredPosition =  Vector2.zero;
+    public void GenerateExplosion(int ExplosionNum)
+    {
+        Vector3 Pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 InputPos = Input.mousePosition - Pos;
+        Vector3 ExplosionPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        var Clone = Instantiate(BrokenButton[ExplosionNum], ExplosionPos, Quaternion.identity, UiRoot);
+        Clone.transform.position = ExplosionPos;
     }
+
 }
+

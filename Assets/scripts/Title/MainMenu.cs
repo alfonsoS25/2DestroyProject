@@ -12,14 +12,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject SkillTree;
 
     [SerializeField] private List<GameObject> ListOfGamen = new List<GameObject>();
-
-
-    void Start()
-    {
-        AddMenu();
-        SelectGamen(0);
-    }
-
     private void AddMenu()
     {
         ListOfGamen.Add(PlayButton);
@@ -27,6 +19,11 @@ public class MainMenu : MonoBehaviour
         ListOfGamen.Add(LevelSelect);
         ListOfGamen.Add(Settings);
         ListOfGamen.Add(SkillTree);
+    }
+    void Start()
+    {
+        AddMenu();
+        SelectGamen(0);
     }
 
     public void SelectGamen(int Index)

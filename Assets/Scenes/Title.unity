@@ -589,6 +589,7 @@ MonoBehaviour:
   ExplosionParticle: {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
   ExplosionParticleButton: {fileID: 6892464973149020795, guid: a0ea76498a489bd4b81e9c21f77dbe41, type: 3}
   UiRoot: {fileID: 557662272}
+  ExplosionHolder: {fileID: 0}
 --- !u!20 &557662271
 Camera:
   m_ObjectHideFlags: 0
@@ -736,7 +737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816166120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598434844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1339,7 +1340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1677178005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1751,13 +1752,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 557662270}
-        m_TargetAssemblyTypeName: ButtonSelector, Assembly-CSharp
-        m_MethodName: Explote
+      - m_Target: {fileID: 2007703730}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1850,11 +1851,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb234cb74e9316043b70ba01c5dbe41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
-  button:
-  - {fileID: 1996491413}
+  BrokenButton:
+  - {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
+  - {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
+  UiRoot: {fileID: 557662272}
+  ListOfScreens:
+  - MainButton
+  - PlayGame
+  - LevelSelect
 --- !u!1 &2028824714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2028824715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1906,7 +1911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2051710374
 RectTransform:
   m_ObjectHideFlags: 0

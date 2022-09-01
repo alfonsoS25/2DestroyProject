@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Settings : MonoBehaviour
@@ -8,22 +6,38 @@ public class Settings : MonoBehaviour
     private Scrollbar BGMScroll;
     [SerializeField]
     private Scrollbar SEScroll;
-
-    // Update is called once per frame
-    void FixedUpdate()
+    [SerializeField]
+    private Scrollbar ParticleScroll;
+    public void SaveSettings(Scrollbar scroll, string SaveSlot)
     {
-
+        float Value;
+        Value = scroll.value;
+        Debug.Log("Saved: " + scroll.value + " at: " + SaveSlot);
+        PlayerPrefs.SetFloat(SaveSlot, Value);
     }
 
-    public void BGMSetter()
+    public void SaveParticleSettings(Scrollbar scroll, string SaveSlot)
     {
-        float BGMValue;
-        BGMValue = BGMScroll.value;
-        Debug.Log(BGMValue);
+        float Value;
+        Value = scroll.value * 800;
+        Value += 200;
+        Debug.Log("Saved: " + Value + " at: " + SaveSlot);
+        PlayerPrefs.SetFloat(SaveSlot, Value);
+        Debug.Log(PlayerPrefs.GetFloat(SaveSlot));
     }
 
-    public void SaveBgm()
+    public void LoadSettings()
     {
-        Debug.Log("SaveBGM");
+        float BGMValue = PlayerPrefs.GetFloat("BGM");
+        BGMScroll.value = BGMValue;
+
+        float SEValue = PlayerPrefs.GetFloat("SE");
+        SEScroll.value = SEValue;
+
+        float ParticleValue = PlayerPrefs.GetFloat("Particles");
+        Debug.Log(ParticleValue);
+        Debug.Log(ParticleValue/800);
+        ParticleScroll.value = (ParticleValue-200)/800;
+
     }
 }

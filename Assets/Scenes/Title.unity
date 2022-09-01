@@ -206,9 +206,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2093002164}
   m_HandleRect: {fileID: 2093002163}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.2
-  m_NumberOfSteps: 0
+  m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -262,7 +262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f63782e97fc6448aa2ac1509ed0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveSlotName: Particles
+  SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
+  IsParticlesSettings: 1
 --- !u!1 &22188587
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +382,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1071,19 +1074,7 @@ MonoBehaviour:
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2051710375}
-        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: BGMSetter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &356848460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,7 +1125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f63782e97fc6448aa2ac1509ed0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveSlotName: BGM
+  SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
+  IsParticlesSettings: 0
 --- !u!1 &380157232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1277,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1809,7 +1803,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f63782e97fc6448aa2ac1509ed0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveSlotName: SE
+  SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
+  IsParticlesSettings: 0
 --- !u!1 &557662269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,6 +3092,18 @@ MonoBehaviour:
           m_StringArgument: Settings
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2051710375}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: LoadSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1531631710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,7 +3455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1661449681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4379,7 +4388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2051710374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4416,6 +4425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMScroll: {fileID: 356848459}
   SEScroll: {fileID: 505212587}
+  ParticleScroll: {fileID: 15038787}
 --- !u!1 &2057510530
 GameObject:
   m_ObjectHideFlags: 0
@@ -4661,7 +4671,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

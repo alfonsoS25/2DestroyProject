@@ -1,26 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class SaveSettings : MonoBehaviour, IPointerUpHandler
 {
     [SerializeField]
-    private Settings sett;
-    // Start is called before the first frame update
-    void Start()
-    {
+    private string SaveSlotName;
 
+    [SerializeField]
+    private Scrollbar SettingScroll;
+
+    [SerializeField]
+    private Settings sett;
+
+    [SerializeField]
+    private bool IsParticlesSettings = false;
+
+    private void Start()
+    {
+        SettingScroll = GetComponent<Scrollbar>();
     }
+
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        sett.SaveBgm();
-        Debug.Log("arriva");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        if (IsParticlesSettings)
+        {
+            sett.SaveParticleSettings(SettingScroll, SaveSlotName);
+        }
+        else
+        {
+            Debug.Log("equisde");
+            sett.SaveSettings(SettingScroll, SaveSlotName);
+        }
     }
 }

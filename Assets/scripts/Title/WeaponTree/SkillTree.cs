@@ -24,11 +24,9 @@ public class SkillTree : MonoBehaviour
 
     [System.Serializable]
     public struct SkillTreeBlock{
-        public RectTransform BlockRect;
-        public Sprite BlockImage;
+        public GameObject BloqueRePuto;
         public bool IsBlockArchived;
         public string BlockName;
-        public Text BlockText;
     };
 
     [SerializeField]
@@ -71,6 +69,7 @@ public class SkillTree : MonoBehaviour
 
     public  void SaveLevel()
     {
+        
         foreach (SkillTreeBlock STB in Block)
         {
             int BooleanInt = STB.IsBlockArchived ? 1:0 ;
@@ -103,10 +102,10 @@ public class SkillTree : MonoBehaviour
             {
                 hola = "noooo";
                 Debug.Log(i);
-                mainMenu.GenerateShadowScreen(Block[i].BlockRect);  //この行が一回目以外飛ばされてしまいます
+                mainMenu.GenerateShadowScreen(Block[i].BloqueRePuto);  //この行が一回目以外飛ばされてしまいます
                 //Debug.Log(Block[i].BlockName);
             }
-            Block[i].BlockText.text = hola;
+            Block[i].BloqueRePuto.GetComponentInChildren<Text>().text = hola;
         }
         
     }

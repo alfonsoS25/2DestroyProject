@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     private GameObject Shadow;
 
     [SerializeField]
-    private List<RectTransform> GeneratedShadowList;
+    private List<Vector3> GeneratedShadowList;
     private void AddMenu()
     {
         ListOfGamen.Add(PlayButton);
@@ -48,14 +48,34 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void GenerateShadowScreen(RectTransform rect)        //指定されたポジションに影を制作する
+    public void GenerateShadowScreen(GameObject cuboputo)        //指定されたポジションに影を制作する
     {
-        Debug.Log("Generated");
-        /*bool Generate = true;                 //デバッグのために全て消されています
-        Debug.Log("PassTest");
-        Debug.Log("to generate: "+ rect.rect);
+        Debug.Log("Generated: " + cuboputo.name + " on: " + cuboputo.GetComponent<Transform>().position);
+        RectTransform cuboSize = cuboputo.GetComponent<RectTransform>();
+        Vector3 CuboPos = cuboputo.GetComponent<Transform>().position;
+        bool Generate = true;
 
-        int i = 0;
+        for (int i = 0; i < GeneratedShadowList.Count; i++)
+        {
+            if (CuboPos == GeneratedShadowList[i])
+            {
+                Debug.Log("not generated");
+                Generate = false;
+            }
+            else
+            {
+                Debug.Log("generated :" + GeneratedShadowList[i]);
+            }
+        }
+        if (Generate)
+        {
+            Debug.Log("Generating");
+            var clone = Instantiate(Shadow, CuboPos, Quaternion.identity,cuboputo.transform);
+            clone.GetComponent<RectTransform>().sizeDelta = cuboSize.sizeDelta;
+            GeneratedShadowList.Add(CuboPos);
+        }
+        //int i = 0;
+        /*
         foreach(RectTransform rectt in GeneratedShadowList)
         {
             Debug.Log("generated :" + GeneratedShadowList[i].rect);
@@ -73,22 +93,6 @@ public class MainMenu : MonoBehaviour
             clone.GetComponent<RectTransform>().sizeDelta = rect.sizeDelta;
             GeneratedShadowList.Add(clone.GetComponent<RectTransform>());*/
         //}
-        /*
-        for (int i = 0; i < GeneratedShadowList.Count; i++)
-        {
-            Debug.Log("generated :" + GeneratedShadowList[i].rect);
-            if (rect.rect == GeneratedShadowList[i].rect)
-            {
-                Debug.Log("Ya");
-                Generate = false;
-            }
-        }
-        if (Generate)
-        {
-            Debug.Log("Save");
-            var clone = Instantiate(Shadow, rect.position, Quaternion.identity, rect.transform);
-            clone.GetComponent<RectTransform>().sizeDelta = rect.sizeDelta;
-            GeneratedShadowList.Add(clone.GetComponent<RectTransform>());
-        }*/
+        
     }
 }

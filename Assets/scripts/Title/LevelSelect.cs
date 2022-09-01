@@ -40,7 +40,7 @@ public class LevelSelect : MonoBehaviour
                 var ButtonClone = Instantiate(LevelButton, Vector3.zero, Quaternion.identity, UI);
 
                 ButtonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
-                mainMenu.GenerateShadowScreen(ButtonClone.GetComponent<RectTransform>());
+                //mainMenu.GenerateShadowScreen(ButtonClone.GetComponent<RectTransform>());
             }
             offset.x = -1300;
         }

@@ -32,12 +32,13 @@ public class SkillTree : MonoBehaviour
     [SerializeField]
     public SkillTreeBlock[] Block = new SkillTreeBlock[5];
 
-
-    // Start is called before the first frame update
     void Start()
     {
         mainMenu = GameObject.FindGameObjectWithTag("MenuManager").gameObject.GetComponent<MainMenu>();
-       // SetSkills();
+    }
+
+    public void LoadMenu()
+    {
         translateMenu();
         LoadLevel();
     }
@@ -48,23 +49,6 @@ public class SkillTree : MonoBehaviour
         position.y = YPos;
         MenuUI.GetComponent<RectTransform>().anchoredPosition3D = position;
     }
-/*
-    private void SetSkills()
-    {
-        int i = 0;
-       foreach(SkillTreeBlock STB in Block)
-        {
-            if (STB.IsBlockArchived)
-            {
-               // Debug.Log("yay");
-            }
-            else
-            {
-                //Debug.Log("noooo");
-            }
-            i++;
-        }
-    }*/
 
 
     public  void SaveLevel()
@@ -107,7 +91,6 @@ public class SkillTree : MonoBehaviour
             }
             Block[i].BloqueRePuto.GetComponentInChildren<Text>().text = hola;
         }
-        
     }
     public void SwichBool(int number)
     {

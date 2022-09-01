@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField]
     private List<Vector3> GeneratedShadowList;
+    [SerializeField]
+    private List<GameObject> ShadowGameObjectList;
     private void AddMenu()
     {
         ListOfGamen.Add(PlayButton);
@@ -45,6 +47,15 @@ public class MainMenu : MonoBehaviour
             { 
                 ListOfGamen[i].SetActive(true);
             }
+        }
+        if(GeneratedShadowList.Count >=1)
+        {
+            for(int i = 0; i < GeneratedShadowList.Count;i++)
+            {
+                Destroy(ShadowGameObjectList[i]);
+            }
+            ShadowGameObjectList.Clear();
+            GeneratedShadowList.Clear();
         }
     }
 
@@ -73,26 +84,7 @@ public class MainMenu : MonoBehaviour
             var clone = Instantiate(Shadow, CuboPos, Quaternion.identity,cuboputo.transform);
             clone.GetComponent<RectTransform>().sizeDelta = cuboSize.sizeDelta;
             GeneratedShadowList.Add(CuboPos);
+            ShadowGameObjectList.Add(clone);
         }
-        //int i = 0;
-        /*
-        foreach(RectTransform rectt in GeneratedShadowList)
-        {
-            Debug.Log("generated :" + GeneratedShadowList[i].rect);
-            if (rect.rect == GeneratedShadowList[i].rect)
-            {
-                Debug.Log("Ya");
-                Generate = false;
-            }
-            i++;
-        }
-        if (Generate)
-        {*/
-            /*Debug.Log("Save");
-            var clone = Instantiate(Shadow, rect.position, Quaternion.identity, rect.transform);
-            clone.GetComponent<RectTransform>().sizeDelta = rect.sizeDelta;
-            GeneratedShadowList.Add(clone.GetComponent<RectTransform>());*/
-        //}
-        
     }
 }

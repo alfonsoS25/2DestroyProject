@@ -14,8 +14,8 @@ public class LevelSelect : MonoBehaviour
     private Transform UI;
 
     private MainMenu mainMenu;
-    // Start is called before the first frame update
-    void Start()
+
+    public void GenerateMenu()
     {
         mainMenu = GameObject.FindGameObjectWithTag("MenuManager").gameObject.GetComponent<MainMenu>();
         MakeMenu();
@@ -40,7 +40,7 @@ public class LevelSelect : MonoBehaviour
                 var ButtonClone = Instantiate(LevelButton, Vector3.zero, Quaternion.identity, UI);
 
                 ButtonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
-                //mainMenu.GenerateShadowScreen(ButtonClone.GetComponent<RectTransform>());
+                mainMenu.GenerateShadowScreen(ButtonClone);
             }
             offset.x = -1300;
         }

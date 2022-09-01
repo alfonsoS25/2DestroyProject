@@ -12,6 +12,7 @@ TagManager:
   - PointCounter
   - SmallBlock
   - DotMan
+  - MenuManager
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,6 @@ public class Settings : MonoBehaviour
     {
         float Value;
         Value = scroll.value;
-        Debug.Log("Saved: " + scroll.value + " at: " + SaveSlot);
         PlayerPrefs.SetFloat(SaveSlot, Value);
     }
 
@@ -21,9 +20,7 @@ public class Settings : MonoBehaviour
         float Value;
         Value = scroll.value * 800;
         Value += 200;
-        Debug.Log("Saved: " + Value + " at: " + SaveSlot);
         PlayerPrefs.SetFloat(SaveSlot, Value);
-        Debug.Log(PlayerPrefs.GetFloat(SaveSlot));
     }
 
     public void LoadSettings()
@@ -35,8 +32,6 @@ public class Settings : MonoBehaviour
         SEScroll.value = SEValue;
 
         float ParticleValue = PlayerPrefs.GetFloat("Particles");
-        Debug.Log(ParticleValue);
-        Debug.Log(ParticleValue/800);
         ParticleScroll.value = (ParticleValue-200)/800;
 
     }

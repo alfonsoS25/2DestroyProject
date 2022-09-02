@@ -15,6 +15,9 @@ public class LevelSelect : MonoBehaviour
 
     private MainMenu mainMenu;
 
+    [SerializeField]
+    private int LevelPass = 0;
+
     public void GenerateMenu()
     {
         mainMenu = GameObject.FindGameObjectWithTag("MenuManager").gameObject.GetComponent<MainMenu>();
@@ -27,20 +30,27 @@ public class LevelSelect : MonoBehaviour
         
     }
 
+
     private void MakeMenu()
     {
         Vector3 offset = new Vector3(-1300,600,0);
         offset.z = -10;
+
+        int Counter = 0;
         for(int i = 0; i < 3; i++)
-        {
+        {   
             offset.y -= 300;
             for(int f = 0; f < 4; f++)
             {
+                
                 offset.x += 500;
                 var ButtonClone = Instantiate(LevelButton, Vector3.zero, Quaternion.identity, UI);
-
                 ButtonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
-                mainMenu.GenerateShadowScreen(ButtonClone);
+                if (Counter >= LevelPass)
+                {
+                    mainMenu.GenerateShadowScreen(ButtonClone);
+                }
+                Counter++;
             }
             offset.x = -1300;
         }

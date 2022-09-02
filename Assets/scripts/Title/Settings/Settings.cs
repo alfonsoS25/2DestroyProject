@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
     private Scrollbar SEScroll;
     [SerializeField]
     private Scrollbar ParticleScroll;
+
     public void SaveSettings(Scrollbar scroll, string SaveSlot)
     {
         float Value;
@@ -25,14 +26,14 @@ public class Settings : MonoBehaviour
 
     public void LoadSettings()
     {
+        float ParticleValue = PlayerPrefs.GetFloat("Particles");
+        ParticleScroll.value = (ParticleValue - 200) / 800;
+        Debug.Log("particle value: " + ParticleScroll.value);
+
         float BGMValue = PlayerPrefs.GetFloat("BGM");
         BGMScroll.value = BGMValue;
 
         float SEValue = PlayerPrefs.GetFloat("SE");
         SEScroll.value = SEValue;
-
-        float ParticleValue = PlayerPrefs.GetFloat("Particles");
-        ParticleScroll.value = (ParticleValue-200)/800;
-
     }
 }

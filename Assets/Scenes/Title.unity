@@ -267,6 +267,7 @@ MonoBehaviour:
   SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
   IsParticlesSettings: 1
+  TextInput: {fileID: 379222308}
 --- !u!1 &22188587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1132,7 @@ MonoBehaviour:
   SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
   IsParticlesSettings: 0
+  TextInput: {fileID: 1449873306}
 --- !u!1 &379222306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1200,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Particle Amount
@@ -1889,6 +1891,7 @@ MonoBehaviour:
   SettingScroll: {fileID: 0}
   sett: {fileID: 2051710375}
   IsParticlesSettings: 0
+  TextInput: {fileID: 1568210453}
 --- !u!1 &557662269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,7 +3369,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Music
@@ -3680,7 +3683,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Sound Effects

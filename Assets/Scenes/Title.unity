@@ -384,7 +384,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -928,12 +928,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2007703732}
         m_TargetAssemblyTypeName: ButtonSelect, Assembly-CSharp
-        m_MethodName: StringToInt
-        m_Mode: 5
+        m_MethodName: GenerateParticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1360,7 +1360,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1892,97 +1892,6 @@ MonoBehaviour:
   sett: {fileID: 2051710375}
   IsParticlesSettings: 0
   TextInput: {fileID: 1568210453}
---- !u!1 &557662269
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 557662272}
-  - component: {fileID: 557662271}
-  - component: {fileID: 557662270}
-  m_Layer: 0
-  m_Name: UICamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &557662270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557662269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a92d28df88e3148adc2c0b1f5cd71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionParticle: {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
-  ExplosionParticleButton: {fileID: 6892464973149020795, guid: a0ea76498a489bd4b81e9c21f77dbe41, type: 3}
-  UiRoot: {fileID: 557662272}
-  ExplosionHolder: {fileID: 0}
---- !u!20 &557662271
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557662269}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 10
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 32
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &557662272
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557662269}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583210752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,6 +3290,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449873304}
   m_CullTransparentMesh: 1
+--- !u!1 &1528991546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528991547}
+  m_Layer: 5
+  m_Name: ExplosionsRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1528991547
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528991546}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2007703731}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1531631707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,12 +3421,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2007703732}
         m_TargetAssemblyTypeName: ButtonSelect, Assembly-CSharp
-        m_MethodName: StringToInt
-        m_Mode: 5
+        m_MethodName: GenerateParticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: Settings
           m_BoolArgument: 0
@@ -3828,8 +3772,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2007703732}
         m_TargetAssemblyTypeName: ButtonSelect, Assembly-CSharp
-        m_MethodName: StringToInt
-        m_Mode: 5
+        m_MethodName: GenerateParticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4133,12 +4077,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2007703732}
         m_TargetAssemblyTypeName: ButtonSelect, Assembly-CSharp
-        m_MethodName: StringToInt
-        m_Mode: 5
+        m_MethodName: GenerateParticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
@@ -4474,7 +4418,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 557662271}
+  m_Camera: {fileID: 22188589}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4652,12 +4596,12 @@ GameObject:
   - component: {fileID: 1996491414}
   - component: {fileID: 1996491413}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TestButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1996491412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4723,8 +4667,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2007703732}
         m_TargetAssemblyTypeName: ButtonSelect, Assembly-CSharp
-        m_MethodName: StringToInt
-        m_Mode: 5
+        m_MethodName: GenerateParticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4782,7 +4726,7 @@ GameObject:
   - component: {fileID: 2007703731}
   - component: {fileID: 2007703732}
   m_Layer: 5
-  m_Name: Buttons
+  m_Name: ParticleManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4800,12 +4744,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1996491412}
+  - {fileID: 1528991547}
   m_Father: {fileID: 1959123924}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2560, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007703732
@@ -4820,33 +4765,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb234cb74e9316043b70ba01c5dbe41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrokenButton: {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
-  UiRoot: {fileID: 557662272}
-  ListOfScreens:
-  - MainButton
-  - LevelSelect
-  - Settings
-  ExplosionMaterial:
-  - {fileID: 2100000, guid: 01c8064a43f83474496c152aba34a15f, type: 2}
-  - {fileID: 2100000, guid: 04a20effb71f08446ba5ba4fe4a9dd70, type: 2}
-  - {fileID: 2100000, guid: 20cdac28768b159479147ae40064bd48, type: 2}
-  - {fileID: 2100000, guid: c2ee09d03e9bd6a489525f1191571129, type: 2}
-  ExplosionTexture1:
-  - {fileID: 2800000, guid: 9446c77c76c6aeb4b821ad278a621d2a, type: 3}
-  - {fileID: 2800000, guid: 571570fff531a1446b0704c454ac1104, type: 3}
-  - {fileID: 2800000, guid: 51500d84a08054348bc44ab04bed383a, type: 3}
-  ExplosionTexture2:
-  - {fileID: 2800000, guid: e19a24854ce17a5428cf833b82bd9cfb, type: 3}
-  - {fileID: 2800000, guid: 15454f724435ba24985c8cb86c092c95, type: 3}
-  - {fileID: 2800000, guid: c1461d429a237fc4ab664b547cb22007, type: 3}
-  ExplosionTexture3:
-  - {fileID: 2800000, guid: 95cfe581076374c45b6d7f735a9540b9, type: 3}
-  - {fileID: 2800000, guid: 2acbfb7f82f51694ea6c9377d5477c76, type: 3}
-  - {fileID: 2800000, guid: 03a7e35c73913644181604f4aa07dfd3, type: 3}
-  ExplosionTexture4:
-  - {fileID: 2800000, guid: 575259413eac6f74e88a6e8e25763df9, type: 3}
-  - {fileID: 2800000, guid: 95cfe581076374c45b6d7f735a9540b9, type: 3}
-  - {fileID: 2800000, guid: 272313425beee6e4e9fd6502057661e9, type: 3}
+  particles:
+  - {fileID: 6892464973149020795, guid: 9c33abf567c5b75428b2a3d3296fefed, type: 3}
+  - {fileID: 6892464973149020795, guid: f9c22244fb9a03c45ac2d296f2fd6aa8, type: 3}
+  - {fileID: 6892464973149020795, guid: a6d4c1c9137932b469ace553324439e1, type: 3}
+  - {fileID: 6892464973149020795, guid: 2837a8e601502104ca19964fca1b108a, type: 3}
+  Root: {fileID: 1528991547}
 --- !u!1 &2011767937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4996,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2051710374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5280,7 +5204,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillTree : MonoBehaviour
@@ -15,11 +13,6 @@ public class SkillTree : MonoBehaviour
     private float YPos;
 
     private MainMenu mainMenu;
-/*
-    [SerializeField]
-    private GameObject[] SkillsSlots;
-    [SerializeField]
-    private bool[] EnabledSkill;*/
 
 
     [System.Serializable]
@@ -51,7 +44,7 @@ public class SkillTree : MonoBehaviour
     }
 
 
-    public  void SaveLevel()
+    public void SaveLevel()
     {
         
         foreach (SkillTreeBlock STB in Block)

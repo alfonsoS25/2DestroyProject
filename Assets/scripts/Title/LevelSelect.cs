@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class LevelSelect : MonoBehaviour
 
     [SerializeField]
     private int LevelPass = 0;
+    int Counter = 0;
+    Dictionary<string, int> LevelDirectory = new Dictionary<string, int>();
 
     public void GenerateMenu()
     {
@@ -24,36 +27,39 @@ public class LevelSelect : MonoBehaviour
         MakeMenu();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     private void MakeMenu()
     {
         Vector3 offset = new Vector3(-1300,600,0);
         offset.z = -10;
 
-        int Counter = 0;
         for(int i = 0; i < 3; i++)
         {   
             offset.y -= 300;
             for(int f = 0; f < 4; f++)
             {
+                int levelStack = new int();
+                levelStack = Counter;
                 
                 offset.x += 500;
-                var ButtonClone = Instantiate(LevelButton, Vector3.zero, Quaternion.identity, UI);
-                ButtonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
+                var buttonClone = Instantiate(LevelButton, Vector3.zero, Quaternion.identity, UI);
+                buttonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
+                buttonClone.GetComponent<Button>().onClick.AddListener(delegate { GenerateLevel("Level" + levelStack); });//onClick.AddListener(hola22);
+                buttonClone.name = "Level" + Counter;
+                Debug.Log(buttonClone.name);
+                LevelDirectory.Add(buttonClone.name, Counter);
                 if (Counter >= LevelPass)
                 {
-                    mainMenu.GenerateShadowScreen(ButtonClone);
+                    mainMenu.GenerateShadowScreen(buttonClone);
                 }
                 Counter++;
             }
             offset.x = -1300;
         }
     }
-    
+    public void GenerateLevel(string Level)
+    {
+        int creator=0;
+        LevelDirectory.TryGetValue(Level,out creator);
+        Debug.Log("Generated: "+ creator);
+    }
 }

@@ -6,6 +6,20 @@ using UnityEngine.UI;
 public class ButtonSelect : MonoBehaviour
 {
     [SerializeField]
+    private GameObject[] particles;
+
+    [SerializeField]
+    private Transform Root;
+
+    public void GenerateParticle(int particleNum)
+    {
+        Vector3 ExplosionPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var Clone = Instantiate(particles[particleNum], ExplosionPos, Quaternion.identity, Root);
+        Clone.transform.position = ExplosionPos;
+    }
+}
+    /*
+    [SerializeField]
     private GameObject BrokenButton;
 
     [SerializeField]
@@ -61,7 +75,6 @@ public class ButtonSelect : MonoBehaviour
         ExplosionMaterial[1].mainTexture = ExplosionTexture2[MaterialNum];
         ExplosionMaterial[2].mainTexture = ExplosionTexture3[MaterialNum];
         ExplosionMaterial[3].mainTexture = ExplosionTexture4[MaterialNum];
-    }
+    }*/
 
-}
-
+//}

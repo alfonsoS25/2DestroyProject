@@ -16,6 +16,7 @@ public class ButtonSelect : MonoBehaviour
         Vector3 ExplosionPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var Clone = Instantiate(particles[particleNum], ExplosionPos, Quaternion.identity, Root);
         Clone.transform.position = ExplosionPos;
+        Destroy(Clone, 3);
     }
 }
     /*

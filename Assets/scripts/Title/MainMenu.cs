@@ -61,7 +61,7 @@ public class MainMenu : MonoBehaviour
 
     public void GenerateShadowScreen(GameObject cuboputo)        //指定されたポジションに影を制作する
     {
-        Debug.Log("Generated: " + cuboputo.name + " on: " + cuboputo.GetComponent<Transform>().position);
+        //Debug.Log("Generated: " + cuboputo.name + " on: " + cuboputo.GetComponent<Transform>().position);
         RectTransform cuboSize = cuboputo.GetComponent<RectTransform>();
         Vector3 CuboPos = cuboputo.GetComponent<Transform>().position;
         bool Generate = true;
@@ -80,7 +80,6 @@ public class MainMenu : MonoBehaviour
         }
         if (Generate)
         {
-            Debug.Log("Generating");
             var clone = Instantiate(Shadow, CuboPos, Quaternion.identity,cuboputo.transform);
             clone.GetComponent<RectTransform>().sizeDelta = cuboSize.sizeDelta;
             GeneratedShadowList.Add(CuboPos);

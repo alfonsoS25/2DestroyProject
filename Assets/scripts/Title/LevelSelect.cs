@@ -18,7 +18,6 @@ public class LevelSelect : MonoBehaviour
 
     [SerializeField]
     private int LevelPass = 0;
-    int Counter = 0;
     Dictionary<string, int> LevelDirectory = new Dictionary<string, int>();
 
     public void GenerateMenu()
@@ -29,6 +28,7 @@ public class LevelSelect : MonoBehaviour
 
     private void MakeMenu()
     {
+        int Counter = 0;
         Vector3 offset = new Vector3(-1300,600,0);
         offset.z = -10;
 
@@ -45,7 +45,6 @@ public class LevelSelect : MonoBehaviour
                 buttonClone.GetComponent<RectTransform>().anchoredPosition3D = offset;
                 buttonClone.GetComponent<Button>().onClick.AddListener(delegate { GenerateLevel("Level" + levelStack); });//onClick.AddListener(hola22);
                 buttonClone.name = "Level" + Counter;
-                Debug.Log(buttonClone.name);
                 LevelDirectory.Add(buttonClone.name, Counter);
                 if (Counter >= LevelPass)
                 {
@@ -62,4 +61,10 @@ public class LevelSelect : MonoBehaviour
         LevelDirectory.TryGetValue(Level,out creator);
         Debug.Log("Generated: "+ creator);
     }
+
+    public void resetDictionary()
+    {
+        LevelDirectory.Clear();
+    }
+
 }

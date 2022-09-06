@@ -169,8 +169,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 15
-      minScalar: 5
+      scalar: 20
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4820,7 +4820,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ff0572c7e34d6245857041211eada95, type: 2}
+  - {fileID: 2100000, guid: bf0c70ae71ca46f4ca251dc95b0c73cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4923,7 +4923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810193280424742087, guid: 6115b3f37ed7b534a97074f374a8e1ae, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6115b3f37ed7b534a97074f374a8e1ae, type: 3}

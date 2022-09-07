@@ -96,21 +96,21 @@ public class PlayerScript : MonoBehaviour
         switch (Power)
         {
             case 0:
-                var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
+               // var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
                 //Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
                 //Vector3 MisileDir = Input.mousePosition - MisilePos;
 
-               // Debug.Log(MisileDir);
-               // float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-               // GrenadeClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
+                //Debug.Log(MisileDir);
+                //float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
+                //GrenadeClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
                 //GrenadeClone.GetComponent<Rigidbody2D>().velocity = (MisileDir/20);
 
-                /*generate a misile
+                //generate a misile
                 var MisileClone = Instantiate(Bomb, transform.position, transform.rotation);
                 Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
                 Vector3 MisileDir = Input.mousePosition - MisilePos;
                 float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);*/
+                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
 
                 break;
             case 1:

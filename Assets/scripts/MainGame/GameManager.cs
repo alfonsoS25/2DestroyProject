@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -29,44 +27,44 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(gamestate);
-        switch (gamestate)
+        Debug.Log(gamestate); 
+        if (!isDecided)
         {
-            case gameState.Ilde:
-                break;
-            case gameState.Attacking:
-                attacking();
-                break;
-            case gameState.GameOver:
-                gameOver();
-                break;
-            case gameState.GameClear:
-                gameClear();
-                break;
+            switch (gamestate)
+            {
+                case gameState.Ilde:
+                    break;
+                case gameState.Attacking:
+                    attacking();
+                    break;
+                case gameState.GameOver:
+                    gameOver();
+                    break;
+                case gameState.GameClear:
+                    gameClear();
+                    break;
+            }
         }
     }
 
     private float counter = 0;
     private void attacking()
     {
-        if (!isDecided)
+        counter += Time.deltaTime;
+        if (counter > 2)
         {
-            counter += Time.deltaTime;
-            if (counter > 5)
+            gamestate = gameState.Ilde;
+            counter = 0;
+            shootTries--;
+            if (shootTries <= 0)
             {
-                gamestate = gameState.Ilde;
-                counter = 0;
-                shootTries--;
-                if (shootTries <= 0)
-                {
-                    checkGame();
-                }
+                checkGame();
             }
         }
     }
     private void checkGame()
     {
-        if(pointManager.actualPoints < pointManager.maxPoints)
+        if(pointManager.actualPoints < pointManager.goalPoints[0])
         {
             gamestate = gameState.GameOver;
         }
@@ -83,7 +81,10 @@ public class GameManager : MonoBehaviour
     }
     private void gameClear()
     {
-        Debug.Log("Pass");
+        float Stars = 0;
+        Stars = pointManager.CalculateStarts();
+        Debug.Log(pointManager.actualPoints);
+        Debug.Log(Stars);
         isDecided = true;
     }
 }

@@ -28,26 +28,32 @@ public class PointManager : MonoBehaviour
 
     public int actualPoints = 0;
 
+    public float[] goalPoints = new float[3];
+
     private void Start()
     {
-        for(int i = 0; i < BlocksCount.transform.childCount;i++)
+        for (int i = 0; i < BlocksCount.transform.childCount; i++)
         {
             maxPoints++;
         }
 
         PointsBarSize = PointsBarSize / maxPoints;
-        PointsBar.transform.localScale = new Vector3(0,1,0);
+        PointsBar.transform.localScale = new Vector3(0, 1, 0);
 
         movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / maxPoints;
         Vector3 positionRect = PointsBar.GetComponent<RectTransform>().anchoredPosition;
         positionRect.x = positionRect.x - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
         PointsBar.transform.localPosition = positionRect;
         maxPoints *= 100;
+
+        goalPoints[0] = maxPoints * 0.4f;
+        goalPoints[1] = maxPoints * 0.75f;
+        goalPoints[2] = maxPoints;
     }
     public void SumPoints(int Points)
     {
         actualPoints += Points;
-        PointsText.text = ""+actualPoints;
+        PointsText.text = "" + actualPoints;
         updatePointBar();
     }
 
@@ -55,10 +61,30 @@ public class PointManager : MonoBehaviour
     {
         PointsBarSizeX += PointsBarSize;
         PointsBar.transform.localScale = new Vector3(PointsBarSizeX, 1, 0);
-        positiondelay+= movepositionX;
+        positiondelay += movepositionX;
         Vector3 position = PointsBar.GetComponent<RectTransform>().anchoredPosition;
         position.x = positiondelay - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
         PointsBar.transform.localPosition = position;
     }
 
+    public int CalculateStarts()
+    {
+        int stars = 0;
+        for (int i = 0; i < 3; i++) {
+
+            if (actualPoints >= goalPoints[i])
+            {
+                stars++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        Debug.Log("estrellas fase 1: " + stars);
+        return stars;
+        
+    } 
 }
+
+

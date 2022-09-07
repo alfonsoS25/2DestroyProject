@@ -22,8 +22,11 @@ public class BombScript : MonoBehaviour
 
     [SerializeField]
     private int Power;
+    [SerializeField]
+    private GameManager gameManager;
 
     private float delay=0.4f;
+
 
 
     // Update is called once per frame
@@ -50,6 +53,13 @@ public class BombScript : MonoBehaviour
 
     void attackMouse()
     {
+        if(gameManager.gamestate != GameManager.gameState.Ilde)
+        {
+            return;
+        }
+        gameManager.gamestate = GameManager.gameState.Attacking;
+
+
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);

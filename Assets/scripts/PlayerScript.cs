@@ -27,9 +27,32 @@ public class PlayerScript : MonoBehaviour
 
     private float delay=0.4f;
 
-
+    [SerializeField]
+    private GameObject[] uiButtons;
 
     // Update is called once per frame
+    private bool CheckDistance(Vector3 pressed)
+    {
+        bool isNear = false;
+        for (int i = 0; i < uiButtons.Length; i++) {
+            Vector3 buttonpos = uiButtons[i].transform.position;
+            buttonpos.z = 0;
+
+            float dist1 = Vector3.Distance(pressed, buttonpos);
+            
+
+            if(dist1< 3f)
+            {
+                isNear = true;
+                break;
+            }
+            else
+            {
+
+            }
+        }
+        return isNear;
+    }
     void Update()
     {
         if (Input.touchCount>0)
@@ -53,18 +76,22 @@ public class PlayerScript : MonoBehaviour
 
     void attackMouse()
     {
-        if(gameManager.gamestate != GameManager.gameState.Ilde)
-        {
-            return;
-        }
-        gameManager.gamestate = GameManager.gameState.Attacking;
-
 
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         worldPosition.z = 0;
 
+        if (CheckDistance(worldPosition))
+        {
+            return;
+        }
+
+        if (gameManager.gamestate != GameManager.gameState.Ilde)
+        {
+            return;
+        }
+        gameManager.gamestate = GameManager.gameState.Attacking;
 
         switch (Power)
         {
@@ -105,17 +132,23 @@ public class PlayerScript : MonoBehaviour
     }
     void AttackTouch()
     {
-        if (gameManager.gamestate != GameManager.gameState.Ilde)
-        {
-            return;
-        }
-        gameManager.gamestate = GameManager.gameState.Attacking;
+        
 
         delay = 0;
         if (delay > 0.4f)
         {
             Touch touch = Input.GetTouch(0);
             Vector3 TouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+
+            if (CheckDistance(TouchPos))
+            {
+                return;
+            }
+            if (gameManager.gamestate != GameManager.gameState.Ilde)
+            {
+                return;
+            }
+            gameManager.gamestate = GameManager.gameState.Attacking;
             TouchPos.z = 0f;
             switch (Power)
             {
@@ -144,7 +177,14 @@ public class PlayerScript : MonoBehaviour
 
     public void ChooceWeapon()
     {
-        gameManager.gamestate = GameManager.gameState.SelectingWeapon;
+        if (gameManager.gamestate == GameManager.gameState.Ilde || gameManager.gamestate == GameManager.gameState.Attacking)
+        {
+            gameManager.gamestate = GameManager.gameState.SelectingWeapon;
+        }
+        else
+        {
+            gameManager.gamestate = GameManager.gameState.Ilde;
+        }
 
     }
 

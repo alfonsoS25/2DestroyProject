@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public gameState gamestate;
 
+    private bool isDecided = false;
+
     [SerializeField]
     private int shootTries;
 
@@ -33,40 +35,55 @@ public class GameManager : MonoBehaviour
             case gameState.Ilde:
                 break;
             case gameState.Attacking:
-                Attacking();
+                attacking();
                 break;
             case gameState.GameOver:
+                gameOver();
                 break;
             case gameState.GameClear:
+                gameClear();
                 break;
         }
     }
 
     private float counter = 0;
-    private void Attacking()
+    private void attacking()
     {
-        counter += Time.deltaTime;
-        if(counter > 5)
+        if (!isDecided)
         {
-            gamestate = gameState.Ilde;
-            counter = 0;
-            shootTries--;
-            if(shootTries <=0)
+            counter += Time.deltaTime;
+            if (counter > 5)
             {
-                CheckGame();
+                gamestate = gameState.Ilde;
+                counter = 0;
+                shootTries--;
+                if (shootTries <= 0)
+                {
+                    checkGame();
+                }
             }
-
         }
     }
-    private void CheckGame()
+    private void checkGame()
     {
         if(pointManager.actualPoints < pointManager.maxPoints)
         {
-            Debug.Log("not Pass");
+            gamestate = gameState.GameOver;
         }
         else
         {
-            Debug.Log("pass");
+            gamestate = gameState.GameClear;
         }
+    }
+
+    private void gameOver()
+    {
+        Debug.Log("not Pass");
+        isDecided = true;
+    }
+    private void gameClear()
+    {
+        Debug.Log("Pass");
+        isDecided = true;
     }
 }

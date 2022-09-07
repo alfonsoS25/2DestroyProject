@@ -105,6 +105,11 @@ public class BombScript : MonoBehaviour
     }
     void AttackTouch()
     {
+        if (gameManager.gamestate != GameManager.gameState.Ilde)
+        {
+            return;
+        }
+        gameManager.gamestate = GameManager.gameState.Attacking;
         delay = 0;
         if (delay > 0.4f)
         {

@@ -8,8 +8,6 @@ public class PointManager : MonoBehaviour
     [SerializeField]
     private Text PointsText;
 
-    [SerializeField] private int PointNum = 0;
-
     [SerializeField]
     private GameObject PointsBar;
 
@@ -26,27 +24,30 @@ public class PointManager : MonoBehaviour
 
     private float positiondelay = 0;
 
+    public float maxPoints = 0;
+
+    public int actualPoints = 0;
+
     private void Start()
     {
-        float BarSize = 0;
         for(int i = 0; i < BlocksCount.transform.childCount;i++)
         {
-            BarSize++;
+            maxPoints++;
         }
 
-        PointsBarSize = PointsBarSize / BarSize;
+        PointsBarSize = PointsBarSize / maxPoints;
         PointsBar.transform.localScale = new Vector3(0,1,0);
 
-        movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / BarSize;
+        movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / maxPoints;
         Vector3 positionRect = PointsBar.GetComponent<RectTransform>().anchoredPosition;
         positionRect.x = positionRect.x - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
         PointsBar.transform.localPosition = positionRect;
-
+        maxPoints *= 100;
     }
     public void SumPoints(int Points)
     {
-        PointNum += Points;
-        PointsText.text = ""+PointNum;
+        actualPoints += Points;
+        PointsText.text = ""+actualPoints;
         updatePointBar();
     }
 

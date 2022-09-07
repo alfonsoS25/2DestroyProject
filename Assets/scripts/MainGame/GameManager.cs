@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField]
+    private PointManager pointManager;
     public enum gameState
     {
         Ilde,
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public gameState gamestate;
 
+    [SerializeField]
+    private int shootTries;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +50,23 @@ public class GameManager : MonoBehaviour
         {
             gamestate = gameState.Ilde;
             counter = 0;
+            shootTries--;
+            if(shootTries <=0)
+            {
+                CheckGame();
+            }
+
+        }
+    }
+    private void CheckGame()
+    {
+        if(pointManager.actualPoints < pointManager.maxPoints)
+        {
+            Debug.Log("not Pass");
+        }
+        else
+        {
+            Debug.Log("pass");
         }
     }
 }

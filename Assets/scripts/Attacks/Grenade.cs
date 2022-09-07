@@ -26,6 +26,8 @@ public class Grenade : MonoBehaviour
 
     public DotsGenerator DotsGen;
 
+    private bool isShooted = false;
+
 
     void Start()
     {
@@ -37,7 +39,11 @@ public class Grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (isShooted)
+        {
+            return;
+        }
+        if (Input.GetMouseButtonDown(0))
         {
             OnDragStart();
         }
@@ -53,6 +59,10 @@ public class Grenade : MonoBehaviour
 
     void OnDragStart()
     {
+        if(isShooted)
+        {
+            return;
+        }
         gameObject.GetComponent<Rigidbody2D>().Sleep();
         StartPoint = cam.ScreenToWorldPoint(Input.mousePosition);
         IsDrag = true;
@@ -71,6 +81,7 @@ public class Grenade : MonoBehaviour
 
     void OnDragEnd()
     {
+        isShooted = true;
         gameObject.GetComponent<Rigidbody2D>().WakeUp();
         IsDrag = false;
         gameObject.GetComponent<Rigidbody2D>().AddForce(force*50);

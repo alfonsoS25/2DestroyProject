@@ -33,6 +33,7 @@ public class CameraScript : MonoBehaviour
         Centered,
         PlayerFocus,
         LevelFocus,
+        WeaponSelection,
     }
 
     [SerializeField]
@@ -61,8 +62,11 @@ public class CameraScript : MonoBehaviour
             case cameraState.PlayerFocus:
                 playerFocus();
                 break;
+            case cameraState.WeaponSelection:
+                break;
         }
     }
+
 
     private void playerFocus()
     {

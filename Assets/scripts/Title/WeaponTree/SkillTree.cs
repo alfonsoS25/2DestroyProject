@@ -66,7 +66,7 @@ public class SkillTree : MonoBehaviour
         UpdateLevels();
     }
 
-    public void UpdateLevels()     //全てのブロックを確認して、IsBlockArchivedのブールがfalseだったら、その上に影を作る
+    public void UpdateLevels()     
     {
         for (int i = 0; i < Block.Length; i++)
         {
@@ -79,7 +79,7 @@ public class SkillTree : MonoBehaviour
             {
                 hola = "noooo";
                 Debug.Log(i);
-                mainMenu.GenerateShadowScreen(Block[i].BloqueRePuto);  //この行が一回目以外飛ばされてしまいます
+                mainMenu.GenerateShadowScreen(Block[i].BloqueRePuto);  
                 //Debug.Log(Block[i].BlockName);
             }
             Block[i].BloqueRePuto.GetComponentInChildren<Text>().text = hola;

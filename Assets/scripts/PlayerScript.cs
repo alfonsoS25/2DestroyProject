@@ -142,4 +142,10 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void ChooceWeapon()
+    {
+        gameManager.gamestate = GameManager.gameState.SelectingWeapon;
+
+    }
+
 }

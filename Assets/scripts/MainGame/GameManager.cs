@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
         Attacking,
         GameOver,
         GameClear,
+        SelectingWeapon,
     }
 
     public gameState gamestate;

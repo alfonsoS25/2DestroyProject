@@ -21,6 +21,9 @@ public class PlayerScript : MonoBehaviour
     private GameObject Grenade;
 
     [SerializeField]
+    private GameObject AirStrike;
+
+    [SerializeField]
     private int Power;
     [SerializeField]
     private GameManager gameManager;
@@ -96,7 +99,8 @@ public class PlayerScript : MonoBehaviour
         switch (Power)
         {
             case 0:
-               // var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
+                //var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
+                var GrenadeClone = Instantiate(AirStrike, transform.position, transform.rotation);
                 //Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
                 //Vector3 MisileDir = Input.mousePosition - MisilePos;
 
@@ -106,11 +110,13 @@ public class PlayerScript : MonoBehaviour
                 //GrenadeClone.GetComponent<Rigidbody2D>().velocity = (MisileDir/20);
 
                 //generate a misile
-                var MisileClone = Instantiate(Bomb, transform.position, transform.rotation);
-                Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
-                Vector3 MisileDir = Input.mousePosition - MisilePos;
-                float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
+
+                /*
+                                var MisileClone = Instantiate(Bomb, transform.position, transform.rotation);
+                                Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
+                                Vector3 MisileDir = Input.mousePosition - MisilePos;
+                                float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
+                                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);*/
 
                 break;
             case 1:

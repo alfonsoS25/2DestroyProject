@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 343640074768435295}
   - component: {fileID: 343640074768435288}
   - component: {fileID: 343640074768435290}
-  - component: {fileID: 343640074768435294}
   - component: {fileID: 343640074768435289}
+  - component: {fileID: 6869101549660642413}
   m_Layer: 0
-  m_Name: Grenade
+  m_Name: AirStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: e03612a33715f3b42990361a4f53b772, type: 3}
+  m_Sprite: {fileID: -7029906952720933914, guid: a20d5eddc8d421048ad2859576508d3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,25 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &343640074768435294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343640074768435291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a77a70fdb6289d4f9ec12adac95ed52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Block:
-    serializedVersion: 2
-    m_Bits: 64
-  Explosion: {fileID: 8873629958316825624, guid: 0034197b9eb1f4f40a0d5790ae9e717d, type: 3}
-  pushforce: 1
-  DotsGen: {fileID: 0}
-  timeToExplode: 3
 --- !u!58 &343640074768435289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,3 +122,21 @@ CircleCollider2D:
   m_Offset: {x: 0.013353288, y: -0.040059805}
   serializedVersion: 2
   m_Radius: 0.3685215
+--- !u!114 &6869101549660642413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343640074768435291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ec035abace2b34c85cfc70f3f854cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Block:
+    serializedVersion: 2
+    m_Bits: 64
+  Explosion: {fileID: 6197880148140433662, guid: fb1865904519c314a8e16c33dfcbc5a8, type: 3}
+  pushforce: 1
+  DotsGen: {fileID: 0}

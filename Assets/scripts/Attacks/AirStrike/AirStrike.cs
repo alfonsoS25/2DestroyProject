@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grenade : MonoBehaviour
+public class AirStrike : MonoBehaviour
 {
     [SerializeField]
     private LayerMask Block;
@@ -27,9 +27,6 @@ public class Grenade : MonoBehaviour
     public DotsGenerator DotsGen;
 
     private bool isShooted = false;
-
-    [SerializeField]
-    private float timeToExplode = 3;
 
 
     void Start()
@@ -93,18 +90,7 @@ public class Grenade : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("aweno"))
-        {
-            if (!IsGoingToExplode)
-            {
-                StartCoroutine(Explode());
-                IsGoingToExplode = true;
-            }
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if ( collision.gameObject.CompareTag("aweno"))
+        if (collision.gameObject.CompareTag("Block"))
         {
             if (!IsGoingToExplode)
             {
@@ -116,9 +102,7 @@ public class Grenade : MonoBehaviour
 
     private IEnumerator Explode()
     {
-        yield return new WaitForSeconds(timeToExplode);
+        yield return new WaitForSeconds(3);
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
-        Destroy(BombClone, 0.1f);
     }
 }

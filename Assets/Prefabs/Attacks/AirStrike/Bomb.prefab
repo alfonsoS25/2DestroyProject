@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 343640074768435294}
   - component: {fileID: 343640074768435289}
   m_Layer: 0
-  m_Name: Grenade
+  m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   Explosion: {fileID: 8873629958316825624, guid: 0034197b9eb1f4f40a0d5790ae9e717d, type: 3}
   pushforce: 1
   DotsGen: {fileID: 0}
-  timeToExplode: 3
+  timeToExplode: 0
 --- !u!58 &343640074768435289
 CircleCollider2D:
   m_ObjectHideFlags: 0

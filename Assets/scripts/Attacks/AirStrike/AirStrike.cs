@@ -104,5 +104,6 @@ public class AirStrike : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
+        BombClone.GetComponent<AirStrikePlanes>().dropPos = transform.position.x;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirStrikePlanes : MonoBehaviour
 {
-    [SerializeField] private Vector3 dropPos;
+    public float dropPos;
 
     [SerializeField] private bool hasDropped = false;
 
@@ -18,12 +18,13 @@ public class AirStrikePlanes : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(0.1f, 0, 0);
-        float Place = Vector2.Distance(transform.position, dropPos);
-        if(Place < 1)
+        float Place = transform.position.x - dropPos;
+        if(Place > 0)
         {
             if (!hasDropped)
             {
-                Instantiate(Bomb, transform.position, Quaternion.identity);
+                var bomb = Instantiate(Bomb, transform.position, Quaternion.identity);
+                bomb.GetComponent<Rigidbody2D>().isKinematic = false;
                 hasDropped = true;
             }
             Debug.Log("estoy");

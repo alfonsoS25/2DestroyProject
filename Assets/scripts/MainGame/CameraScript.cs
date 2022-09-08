@@ -34,6 +34,7 @@ public class CameraScript : MonoBehaviour
         PlayerFocus,
         LevelFocus,
         WeaponSelection,
+        CameraShake,
     }
 
     [SerializeField]
@@ -64,11 +65,41 @@ public class CameraScript : MonoBehaviour
                 break;
             case cameraState.WeaponSelection:
                 break;
+            case cameraState.CameraShake:
+                cameraShake();
+                break;
         }
     }
 
+    [Header("Shake")]
 
-    private void playerFocus()
+    public Vector3 savePos;
+    private float shakeTime = 0;
+    [SerializeField]
+    private float shakeTimeSet = 2;
+    private void cameraShake()
+    {
+        if(shakeTime <= 0)
+        {
+            camState = cameraState.Ilde;
+            return;
+        }
+        Vector3 randomshake = Vector3.zero;
+        randomshake.x = Random.Range(-shakeTime/2, shakeTime/2);
+        randomshake.y = Random.Range(-shakeTime / 2, shakeTime/2);
+        transform.position = savePos + randomshake;
+        shakeTime -= 0.04f;
+    }
+
+    
+    public void startCameraShake()
+    {
+        savePos = transform.position;
+        camState = cameraState.CameraShake;
+        shakeTime = shakeTimeSet;
+    }
+
+        private void playerFocus()
     {
         Vector3 Pos = new Vector3(playerPos.x + PlayerCamOffset, playerPos.y, -10);
         cameraLookAt(Pos,PlayerCamSize);

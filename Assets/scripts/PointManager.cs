@@ -12,7 +12,7 @@ public class PointManager : MonoBehaviour
     private GameObject PointsBar;
 
     [SerializeField]
-    private GameObject BlocksCount;
+    private GameObject blocksCounter;
 
     [SerializeField]
     private float PointsBarSize = 1;
@@ -30,9 +30,17 @@ public class PointManager : MonoBehaviour
 
     public float[] goalPoints = new float[3];
 
+
+
     private void Start()
     {
-        for (int i = 0; i < BlocksCount.transform.childCount; i++)
+       
+    }
+
+    public void generatePointSystem()
+    {
+        blocksCounter = GameObject.FindGameObjectWithTag("LevelRoot");
+        for (int i = 0; i < blocksCounter.GetComponentInChildren<Transform>().childCount; i++)
         {
             maxPoints++;
         }

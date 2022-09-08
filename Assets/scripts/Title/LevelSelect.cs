@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
@@ -60,6 +61,8 @@ public class LevelSelect : MonoBehaviour
         int creator=0;
         LevelDirectory.TryGetValue(Level,out creator);
         Debug.Log("Generated: "+ creator);
+        PlayerPrefs.SetInt("levelToPlay", creator);
+        SceneManager.LoadScene("Main");
     }
 
     public void resetDictionary()

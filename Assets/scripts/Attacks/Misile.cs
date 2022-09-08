@@ -28,7 +28,6 @@ public class Misile : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("SmallBlock"))
         {
-            Debug.Log("Hit");
             var Clone =Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(Clone, 0.1f);
             Destroy(this.gameObject);

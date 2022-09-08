@@ -4221,7 +4221,7 @@ MonoBehaviour:
   LevelButton: {fileID: 8836232019478377498, guid: 15460e53835c0824e99876921e6ed97e, type: 3}
   RectButton: {fileID: 1661449681}
   UI: {fileID: 1661449681}
-  LevelPass: 3
+  LevelPass: 6
 --- !u!1 &1677178004
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private GameObject Bomb;
+    private GameObject Misile;
     [SerializeField]
     private GameObject BlackHole;
 
@@ -100,7 +100,7 @@ public class PlayerScript : MonoBehaviour
         {
             case 0:
                 //var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
-                var GrenadeClone = Instantiate(AirStrike, transform.position, transform.rotation);
+                var GrenadeClone = Instantiate(Misile, transform.position, transform.rotation);
                 //Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
                 //Vector3 MisileDir = Input.mousePosition - MisilePos;
 
@@ -130,16 +130,20 @@ public class PlayerScript : MonoBehaviour
                 break;
             case 2:
                 var BlackholeClone = Instantiate(BlackHole, worldPosition, transform.rotation);
-                Destroy(BlackholeClone, 0.4f); break;
+                Destroy(BlackholeClone, 1f); break;
             case 3:
                 var wrekingBallClone = Instantiate(wrekingBall, worldPosition, transform.rotation);
                 Destroy(wrekingBallClone, 4f); break;
+            case 4:
+                var airStrikeClone = Instantiate(AirStrike, transform.position, transform.rotation);
+                break;
+            case 5:
+                var grenadeClne = Instantiate(Grenade, transform.position, transform.rotation);
+                break;
         }
     }
     void AttackTouch()
     {
-        
-
         delay = 0;
         if (delay > 0.4f)
         {
@@ -159,7 +163,7 @@ public class PlayerScript : MonoBehaviour
             switch (Power)
             {
                 case 0:
-                    var BombClone = Instantiate(Bomb, TouchPos, transform.rotation);
+                    var BombClone = Instantiate(Misile, TouchPos, transform.rotation);
                     Destroy(BombClone, 0.1f); break;
                 case 1:
 
@@ -177,6 +181,12 @@ public class PlayerScript : MonoBehaviour
                 case 3:
                     var wrekingBallClone = Instantiate(wrekingBall, TouchPos, transform.rotation);
                     Destroy(wrekingBallClone, 4f); break;
+                case 4:
+                    var airStrikeClone = Instantiate(AirStrike, TouchPos, transform.rotation);
+                    break;
+                case 5:
+                    var grenadeClne = Instantiate(Grenade, TouchPos, transform.rotation);
+                    break;
             }
         }
     }

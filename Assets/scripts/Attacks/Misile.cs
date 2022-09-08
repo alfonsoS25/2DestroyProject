@@ -13,13 +13,13 @@ public class Misile : MonoBehaviour
     private float Speed;
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
-           rig.velocity = transform.right * Speed;
-/*
         Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 MisileDir = Input.mousePosition - MisilePos;
         float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);*/
+        transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
+        rig = GetComponent<Rigidbody2D>();
+           rig.velocity = transform.right * Speed;
+
     }
 
 

@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform stageRoot;
 
+    private Animator uiAnim;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -32,18 +37,30 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-
+        uiAnim = GetComponent<Animator>();
     }
 
     public void LoadScene()
     {
-
         int randomnum = PlayerPrefs.GetInt("levelToPlay");//Random.Range(0,3);
         int randomnum2 = randomnum / 3;
         randomnum = randomnum % 3;
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
         var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum),transform.position,Quaternion.identity,stageRoot);
     }
+    public void ReloadScene()
+    {
+        StartCoroutine(reloadScene());
+    }
+    
+    private IEnumerator reloadScene()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Main");
+    }
+
+    
+
     // Update is called once per frame
     void FixedUpdate()
     {

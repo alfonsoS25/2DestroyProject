@@ -130,7 +130,7 @@ public class PlayerScript : MonoBehaviour
                 break;
             case 2:
                 var BlackholeClone = Instantiate(BlackHole, worldPosition, transform.rotation);
-                Destroy(BlackholeClone, 1f); break;
+                 break;
             case 3:
                 var wrekingBallClone = Instantiate(wrekingBall, worldPosition, transform.rotation);
                 Destroy(wrekingBallClone, 4f); break;

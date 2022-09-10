@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform stageRoot;
 
+    [SerializeField]
     private Animator uiAnim;
 
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        uiAnim = GetComponent<Animator>();
+        uiAnim.Play("Start");
     }
 
     public void LoadScene()
@@ -55,7 +56,8 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator reloadScene()
     {
-        yield return new WaitForSeconds(3);
+        uiAnim.Play("Leave");
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("Main");
     }
 
@@ -88,7 +90,7 @@ public class GameManager : MonoBehaviour
     private void attacking()
     {
         counter += Time.deltaTime;
-        if (counter > 2)
+        if (counter > 0.3f)//3)
         {
             gamestate = gameState.Ilde;
             counter = 0;

@@ -22,7 +22,7 @@ public class MovementLerp : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
         transform.Translate(new Vector3(0, Velocity, 0));
         if(transform.position.y > startPos.y + offset || transform.position.y < startPos.y)
         {

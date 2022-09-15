@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
 public class SaveSettings : MonoBehaviour, IPointerUpHandler
@@ -17,10 +18,14 @@ public class SaveSettings : MonoBehaviour, IPointerUpHandler
     private bool IsParticlesSettings = false;
 
     [SerializeField]
-    private Text TextInput;
+    private Text textInput;
+
+    [SerializeField]
+    private AudioMixer audio;
 
     private void Start()
     {
+        sett.LoadSettings();
         SettingScroll = GetComponent<Scrollbar>();
         UpdateText();
     }
@@ -31,14 +36,16 @@ public class SaveSettings : MonoBehaviour, IPointerUpHandler
             sett.SaveParticleSettings(SettingScroll, SaveSlotName);
         }
         else
-        {
+        {   
+            audio.SetFloat(SaveSlotName, Mathf.Log(Mathf.Clamp(SettingScroll.value,0.0001f,1)) * 20);
+
             sett.SaveSettings(SettingScroll, SaveSlotName);
         }
         UpdateText();
     }
-    private void UpdateText()
+    public void UpdateText()
     {
-        Debug.Log(SettingScroll.value);
-        TextInput.text = SaveSlotName + ": " + SettingScroll.value * 100 + "%";
+        textInput.text = SaveSlotName + ": " + (int)(SettingScroll.value * 100) + "%";
     }
+
 }

@@ -212,7 +212,19 @@ MonoBehaviour:
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 15038790}
+        m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15038788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +280,7 @@ MonoBehaviour:
   sett: {fileID: 2051710375}
   IsParticlesSettings: 1
   TextInput: {fileID: 379222308}
+  audio: {fileID: 24100000, guid: 932fbe8ad500bb14fa87119c1558a4b8, type: 2}
 --- !u!1 &22188587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1106,19 @@ MonoBehaviour:
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 356848462}
+        m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &356848460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,6 +1174,7 @@ MonoBehaviour:
   sett: {fileID: 2051710375}
   IsParticlesSettings: 0
   TextInput: {fileID: 1449873306}
+  audio: {fileID: 24100000, guid: 932fbe8ad500bb14fa87119c1558a4b8, type: 2}
 --- !u!1 &379222306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,7 +1890,19 @@ MonoBehaviour:
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 505212590}
+        m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &505212588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,6 +1958,7 @@ MonoBehaviour:
   sett: {fileID: 2051710375}
   IsParticlesSettings: 0
   TextInput: {fileID: 1568210453}
+  audio: {fileID: 24100000, guid: 932fbe8ad500bb14fa87119c1558a4b8, type: 2}
 --- !u!1 &583210752
 GameObject:
   m_ObjectHideFlags: 0

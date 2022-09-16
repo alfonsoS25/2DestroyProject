@@ -38,7 +38,6 @@ public class SaveSettings : MonoBehaviour, IPointerUpHandler
         else
         {   
             audio.SetFloat(SaveSlotName, Mathf.Log(Mathf.Clamp(SettingScroll.value,0.0001f,1)) * 20);
-
             sett.SaveSettings(SettingScroll, SaveSlotName);
         }
         UpdateText();

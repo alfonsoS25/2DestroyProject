@@ -91,7 +91,6 @@ public class PointManager : MonoBehaviour
         }
         Debug.Log("estrellas fase 1: " + stars);
         return stars;
-        
     } 
 }
 

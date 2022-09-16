@@ -4,29 +4,22 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField]
-    private GameObject Misile;
-    [SerializeField]
-    private GameObject BlackHole;
-
     [SerializeField]
     private GameObject Char;
-    [SerializeField]
-    private GameObject Laser;
-    [SerializeField]
-    private GameObject wrekingBall;
-
-    [SerializeField]
-    private GameObject Grenade;
-
-    [SerializeField]
-    private GameObject AirStrike;
+    // Start is called before the first frame update
+    [SerializeField]    private GameObject Misile;
+    [SerializeField]    private GameObject BlackHole;
+    [SerializeField]    private GameObject Laser;
+    [SerializeField]    private GameObject wrekingBall;
+    [SerializeField]    private GameObject Grenade;
+    [SerializeField]    private GameObject AirStrike;
+    [SerializeField]    private GameObject satelitalStrike;
+    [SerializeField]    private GameObject drill;
+    [SerializeField]    private GameObject tnt;
+    [SerializeField]    private GameManager gameManager;
 
     [SerializeField]
     private int Power;
-    [SerializeField]
-    private GameManager gameManager;
 
     private float delay=0.4f;
 
@@ -139,6 +132,9 @@ public class PlayerScript : MonoBehaviour
                 break;
             case 5:
                 var grenadeClne = Instantiate(Grenade, transform.position, transform.rotation);
+                break;
+            case 6:
+                var SatelitalStrike = Instantiate(Grenade, transform.position, transform.rotation);
                 break;
         }
     }

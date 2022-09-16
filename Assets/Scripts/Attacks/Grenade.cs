@@ -89,6 +89,7 @@ public class Grenade : MonoBehaviour
         IsDrag = false;
         gameObject.GetComponent<Rigidbody2D>().AddForce(force*50);
         //DotsGen.Hide();
+        gameObject.GetComponent<Rigidbody2D>().angularVelocity = -180;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Text shootCounter;
     [SerializeField]
     private PointManager pointManager;
     public enum gameState
@@ -48,6 +51,7 @@ public class GameManager : MonoBehaviour
         randomnum = randomnum % 3;
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
         var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum),transform.position,Quaternion.identity,stageRoot);
+        shootCounter.text = "shoots left: " + shootTries;
     }
     public void ReloadScene()
     {
@@ -95,6 +99,7 @@ public class GameManager : MonoBehaviour
             gamestate = gameState.Ilde;
             counter = 0;
             shootTries--;
+            shootCounter.text = "shoots left: " + shootTries;
             if (shootTries <= 0)
             {
                 checkGame();
@@ -122,7 +127,6 @@ public class GameManager : MonoBehaviour
     {
         float Stars = 0;
         Stars = pointManager.CalculateStarts();
-        Debug.Log(pointManager.actualPoints);
         Debug.Log(Stars);
         isDecided = true;
     }

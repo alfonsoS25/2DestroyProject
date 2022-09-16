@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject LevelSelect;
     [SerializeField] private GameObject Settings;
     [SerializeField] private GameObject SkillTree;
+    [SerializeField] private GameObject GameMovie;
 
     [SerializeField] private List<GameObject> ListOfGamen = new List<GameObject>();
 
@@ -31,6 +32,18 @@ public class MainMenu : MonoBehaviour
     }
     void Start()
     {
+        StartCoroutine(startUp());
+    }
+    private IEnumerator startUp()
+    {
+        yield return new WaitForSeconds(6);
+        GameMovie.SetActive(false);
+        startMenu();
+    }
+
+    private void startMenu()
+    {
+
         AddMenu();
         SelectGamen(0);
     }

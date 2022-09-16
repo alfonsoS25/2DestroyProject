@@ -97,8 +97,24 @@ public class BlockScript : MonoBehaviour
             collision.gameObject.GetComponent<BlockScript>().DestroyIntoBlocks();
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Drill"))
+        {
+            destroyInstantly();
+        }
+    }
+    public void destroyInstantly()
+    {
+        if (!IsDestroyed)
+        {
+            IsDestroyed = true;
+            pointM.SumPoints(100);
+            Destroy(this.gameObject);
+        }
+    }
 
-    public void DestroyIntoBlocks()
+        public void DestroyIntoBlocks()
     {
         if (!IsDestroyed)
         {

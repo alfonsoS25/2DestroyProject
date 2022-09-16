@@ -28,9 +28,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Transform stageRoot;
+    [SerializeField]
+    private Transform uIRoot;
 
     [SerializeField]
     private Animator uiAnim;
+
+    [SerializeField]
+    private GameObject clearMenu;
+    [SerializeField]
+    private GameObject defeatMenu;
 
     // Start is called before the first frame update
     private void Awake()
@@ -46,11 +53,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene()
     {
-        int randomnum = PlayerPrefs.GetInt("levelToPlay");//Random.Range(0,3);
+        int randomnum = PlayerPrefs.GetInt("levelToPlay");
         int randomnum2 = randomnum / 3;
         randomnum = randomnum % 3;
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
-        var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum),transform.position,Quaternion.identity,stageRoot);
+        Vector3 hola = new Vector3(transform.position.x, transform.position.y, 60);
+        var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum), hola,Quaternion.identity,stageRoot);
         shootCounter.text = "shoots left: " + shootTries;
     }
     public void ReloadScene()
@@ -58,13 +66,14 @@ public class GameManager : MonoBehaviour
         StartCoroutine(reloadScene());
     }
     
-    private IEnumerator reloadScene()
-    {
-        uiAnim.Play("Leave");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Main");
-    }
 
+    public void loadNextLevel()
+    {
+        int level = PlayerPrefs.GetInt("levelToPlay");
+        level++;
+        PlayerPrefs.SetInt("levelToPlay", level);
+        StartCoroutine(reloadScene());
+    } 
     
 
     // Update is called once per frame
@@ -89,7 +98,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     private float counter = 0;
     private void attacking()
     {
@@ -118,16 +126,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void backToMainMenu()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
     private void gameOver()
     {
-        Debug.Log("not Pass");
         isDecided = true;
+        Instantiate(defeatMenu, uIRoot.transform.position, Quaternion.identity, uIRoot);
     }
+    private IEnumerator reloadScene()
+    {
+        uiAnim.Play("Leave");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Main");
+    }
+
     private void gameClear()
     {
         float Stars = 0;
         Stars = pointManager.CalculateStarts();
         Debug.Log(Stars);
         isDecided = true;
+        Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity,uIRoot);
     }
 }

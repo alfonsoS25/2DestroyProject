@@ -9,9 +9,11 @@ public class GameClear : MonoBehaviour
     [SerializeField]
     private GameObject gameClearAdd;
 
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").gameObject.GetComponent<GameManager>();
         gameClearMenu.SetActive(false);
         gameClearAdd.SetActive(true);
         StartCoroutine(_enableFinishMenu());
@@ -23,10 +25,19 @@ public class GameClear : MonoBehaviour
         gameClearMenu.SetActive(true);
         gameClearAdd.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void nextLevel()
     {
-        
+        gameManager.loadNextLevel();
+    }
+    public void backToMenu()
+    {
+        gameManager.backToMainMenu();
+    }
+
+    public void skipAD()
+    {
+        StopAllCoroutines();
+        gameClearMenu.SetActive(true);
+        gameClearAdd.SetActive(false);
     }
 }

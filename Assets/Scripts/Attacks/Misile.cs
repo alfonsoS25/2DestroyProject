@@ -21,9 +21,6 @@ public class Misile : MonoBehaviour
            rig.velocity = transform.right * Speed;
 
     }
-
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("SmallBlock"))

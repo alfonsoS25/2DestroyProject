@@ -86,7 +86,8 @@ public class Drill : MonoBehaviour
         IsDrag = false;
         gameObject.GetComponent<Rigidbody2D>().AddForce(force*50);
         //DotsGen.Hide();
-        gameObject.GetComponent<Rigidbody2D>().angularVelocity = -180;
+        gameObject.GetComponent<Rigidbody2D>().angularVelocity = -40;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -124,6 +124,9 @@ public class PlayerScript : MonoBehaviour
             case 7:
                 var tankclone = Instantiate(tank, transform.position, transform.rotation);
                 break;
+            case 8:
+                var satelitalstrike = Instantiate(satelitalStrike, transform.position, transform.rotation);
+                break;
         }
 
     }

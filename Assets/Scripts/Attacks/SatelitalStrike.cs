@@ -9,6 +9,8 @@ public class SatelitalStrike : MonoBehaviour
 
     [SerializeField]
     private GameObject satelitalLaser;
+    [SerializeField]
+    private GameObject satelitalMark;
 
     private bool IsGoingToExplode = false;
 
@@ -103,8 +105,15 @@ public class SatelitalStrike : MonoBehaviour
 
     private IEnumerator Explode()
     {
+        yield return new WaitForSeconds(2);
+        Vector3 pos = transform.position;
+        pos.y = 6;
+        var satelitalMmark = Instantiate(satelitalMark, pos, Quaternion.identity,transform);
+        satelitalMmark.transform.position = pos;
         yield return new WaitForSeconds(3);
-        var BombClone = Instantiate(satelitalLaser, transform.position, Quaternion.identity);
-        BombClone.GetComponent<AirStrikePlanes>().dropPos = transform.position.x;
+        pos.y += 15f;
+        var BombClone = Instantiate(satelitalLaser, satelitalMmark.transform.position, Quaternion.identity);
+        BombClone.GetComponent<Transform>().transform.rotation = Quaternion.Euler(0, 0, -90);
+        Destroy(satelitalMmark);
     }
 }

@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]    private GameObject AirStrike;
     [SerializeField]    private GameObject satelitalStrike;
     [SerializeField]    private GameObject drill;
-    [SerializeField]    private GameObject tnt;
+    [SerializeField]    private GameObject tank;
     [SerializeField]    private GameManager gameManager;
 
     [SerializeField]
@@ -26,6 +26,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private GameObject[] uiButtons;
 
+    [SerializeField] private Sprite[] _playerWeapons;
+
     // Update is called once per frame
     private bool CheckDistance(Vector3 pressed)
     {
@@ -33,10 +35,7 @@ public class PlayerScript : MonoBehaviour
         for (int i = 0; i < uiButtons.Length; i++) {
             Vector3 buttonpos = uiButtons[i].transform.position;
             buttonpos.z = 0;
-
             float dist1 = Vector3.Distance(pressed, buttonpos);
-            
-
             if(dist1< 3f)
             {
                 isNear = true;
@@ -68,6 +67,10 @@ public class PlayerScript : MonoBehaviour
     public void ChangePower(int power)
     {
         Power = power;
+        if (_playerWeapons[Power] != null)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = _playerWeapons[Power];
+        }
     }
 
     void attackMouse()
@@ -89,35 +92,16 @@ public class PlayerScript : MonoBehaviour
         }
         gameManager.gamestate = GameManager.gameState.Attacking;
 
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - pos;
+        Debug.DrawRay(transform.position, pos);
         switch (Power)
         {
             case 0:
-                //var GrenadeClone = Instantiate(Grenade, transform.position, transform.rotation);
                 var GrenadeClone = Instantiate(Misile, transform.position, transform.rotation);
-                //Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
-                //Vector3 MisileDir = Input.mousePosition - MisilePos;
-
-                //Debug.Log(MisileDir);
-                //float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-                //GrenadeClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);
-                //GrenadeClone.GetComponent<Rigidbody2D>().velocity = (MisileDir/20);
-
-                //generate a misile
-
-                /*
-                                var MisileClone = Instantiate(Bomb, transform.position, transform.rotation);
-                                Vector3 MisilePos = Camera.main.WorldToScreenPoint(transform.position);
-                                Vector3 MisileDir = Input.mousePosition - MisilePos;
-                                float MisileDngle = Mathf.Atan2(MisileDir.y, MisileDir.x) * Mathf.Rad2Deg;
-                                MisileClone.transform.rotation = Quaternion.AngleAxis(MisileDngle, Vector3.forward);*/
-
                 break;
             case 1:
                 var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
-                //DestroyerLaser.transform.position = new Vector3(transform.position.x + (transform.localScale.x / 2), transform.position.y, transform.position.z);
-
-                Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-                Vector3 dir = Input.mousePosition - pos;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 DestroyerLaser.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 break;
@@ -126,7 +110,8 @@ public class PlayerScript : MonoBehaviour
                  break;
             case 3:
                 var wrekingBallClone = Instantiate(wrekingBall, worldPosition, transform.rotation);
-                Destroy(wrekingBallClone, 4f); break;
+                Destroy(wrekingBallClone, 4f); 
+                break;
             case 4:
                 var airStrikeClone = Instantiate(AirStrike, transform.position, transform.rotation);
                 break;
@@ -134,10 +119,15 @@ public class PlayerScript : MonoBehaviour
                 var grenadeClne = Instantiate(Grenade, transform.position, transform.rotation);
                 break;
             case 6:
-                var SatelitalStrike = Instantiate(Grenade, transform.position, transform.rotation);
+                var drillclone = Instantiate(drill, transform.position, transform.rotation);
+                break;
+            case 7:
+                var tankclone = Instantiate(tank, transform.position, transform.rotation);
                 break;
         }
+
     }
+
     void AttackTouch()
     {
         delay = 0;
@@ -187,6 +177,13 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - pos;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
     public void ChooceWeapon()
     {
         if (gameManager.gamestate == GameManager.gameState.Ilde || gameManager.gamestate == GameManager.gameState.Attacking)

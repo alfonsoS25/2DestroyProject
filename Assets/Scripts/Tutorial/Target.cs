@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private GameManager gameManager;
+    [SerializeField]
+    private int id;
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").gameObject.GetComponent<GameManager>();
+        id = gameManager.getTargetID;
     }
 
     // Update is called once per frame

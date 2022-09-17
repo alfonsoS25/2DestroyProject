@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour
                     break;
                 case gameState.onTutorial:
                     onTutorialPhase();
+                    GenerateTarget(0);
                     break;
             }
         }

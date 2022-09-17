@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject LevelSelect;
     [SerializeField] private GameObject Settings;
     [SerializeField] private GameObject SkillTree;
+
     [SerializeField] private GameObject GameMovie;
 
     [SerializeField] private List<GameObject> ListOfGamen = new List<GameObject>();
@@ -43,7 +44,6 @@ public class MainMenu : MonoBehaviour
 
     private void startMenu()
     {
-
         AddMenu();
         SelectGamen(0);
     }
@@ -99,4 +99,5 @@ public class MainMenu : MonoBehaviour
             ShadowGameObjectList.Add(clone);
         }
     }
+
 }

@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject player;
+
     [SerializeField]
     private Text shootCounter;
     [SerializeField]
@@ -17,6 +21,7 @@ public class GameManager : MonoBehaviour
         GameOver,
         GameClear,
         SelectingWeapon,
+        onText,
     }
 
     public gameState gamestate;
@@ -47,6 +52,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject tutorialLevel;
 
+    [SerializeField]
+    private GameObject textSample;
+
+    [SerializeField]
+    private TextMeshProUGUI textToWrite;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -56,34 +67,33 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        if(isTutorial)
-        {
-            shootTries = 999;
-        }
+        var clone = Instantiate(textSample, player.transform.position, Quaternion.identity,uIRoot);
+        textToWrite = clone.GetComponent<TextMeshProUGUI>();
+
         StartCoroutine(generateText("Bienvenido a 2Destroy!"));
         uiAnim.Play("Start");
     }
 
     public void LoadScene()
     {
-        Vector3 hola = new Vector3(transform.position.x, transform.position.y, 60);
+        Vector3 stagePos = new Vector3(transform.position.x, transform.position.y, 60);
         if (isTutorial)
         {
-            Instantiate(tutorialLevel, hola, Quaternion.identity, stageRoot);
+            shootTries = 999;
+            Instantiate(tutorialLevel, stagePos, Quaternion.identity, stageRoot);
             return;
         }
         int randomnum = PlayerPrefs.GetInt("levelToPlay");
         int randomnum2 = randomnum / 3;
         randomnum = randomnum % 3;
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
-        var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum), hola,Quaternion.identity,stageRoot);
+        var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum), stagePos,Quaternion.identity,stageRoot);
         shootCounter.text = "shoots left: " + shootTries;
     }
     public void ReloadScene()
     {
         StartCoroutine(reloadScene());
     }
-    
 
     public void loadNextLevel()
     {
@@ -112,6 +122,8 @@ public class GameManager : MonoBehaviour
                     break;
                 case gameState.GameClear:
                     gameClear();
+                    break;
+                case gameState.onText:
                     break;
             }
         }
@@ -177,8 +189,8 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < textToShow.Length; i++)
         {
             writeText += textToShow[i];
-            Debug.Log(writeText);
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+            textToWrite.text = writeText;
+             yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
         }
     }
 }

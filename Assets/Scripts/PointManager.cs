@@ -28,7 +28,23 @@ public class PointManager : MonoBehaviour
 
     public int actualPoints = 0;
 
+    [SerializeField]
+    private GameObject[] Stars;
+
+    [System.Serializable]
+    public struct star
+    {
+        public bool isAlreadyObtained;
+        public Image image;
+    };
+
+    [SerializeField]
+    public star[] pointStar = new star[3];
+
     public float[] goalPoints = new float[3];
+
+    [SerializeField]
+    private Sprite starComplete;
 
 
 
@@ -54,7 +70,7 @@ public class PointManager : MonoBehaviour
         PointsBar.transform.localPosition = positionRect;
         maxPoints *= 100;
 
-        goalPoints[0] = maxPoints * 0.4f;
+        goalPoints[0] = maxPoints * 0.5f;
         goalPoints[1] = maxPoints * 0.75f;
         goalPoints[2] = maxPoints;
     }
@@ -62,7 +78,24 @@ public class PointManager : MonoBehaviour
     {
         actualPoints += Points;
         PointsText.text = "" + actualPoints;
-        updatePointBar();
+        updatePointBar(); for 
+            
+        (int i = 0; i < 3; i++)
+        {
+
+            if (actualPoints >= goalPoints[i])
+            {
+                if (!pointStar[i].isAlreadyObtained) { 
+                    pointStar[i].isAlreadyObtained = true;
+                    pointStar[i].image.sprite = starComplete;
+                }           //tratar de mejorar
+            }
+            else
+            {
+                break;
+            }
+        }
+
     }
 
     void updatePointBar()

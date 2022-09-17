@@ -31,6 +31,9 @@ public class PointManager : MonoBehaviour
     [SerializeField]
     private GameObject[] Stars;
 
+    [SerializeField]
+    private bool isTutorial = false;
+
     [System.Serializable]
     public struct star
     {
@@ -55,24 +58,27 @@ public class PointManager : MonoBehaviour
 
     public void generatePointSystem()
     {
-        blocksCounter = GameObject.FindGameObjectWithTag("LevelRoot");
-        for (int i = 0; i < blocksCounter.GetComponentInChildren<Transform>().childCount; i++)
+        if (!isTutorial)
         {
-            maxPoints++;
+            blocksCounter = GameObject.FindGameObjectWithTag("LevelRoot");
+            for (int i = 0; i < blocksCounter.GetComponentInChildren<Transform>().childCount; i++)
+            {
+                maxPoints++;
+            }
+
+            PointsBarSize = PointsBarSize / maxPoints;
+            PointsBar.transform.localScale = new Vector3(0, 1, 0);
+
+            movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / maxPoints;
+            Vector3 positionRect = PointsBar.GetComponent<RectTransform>().anchoredPosition;
+            positionRect.x = positionRect.x - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
+            PointsBar.transform.localPosition = positionRect;
+            maxPoints *= 100;
+
+            goalPoints[0] = maxPoints * 0.5f;
+            goalPoints[1] = maxPoints * 0.75f;
+            goalPoints[2] = maxPoints;
         }
-
-        PointsBarSize = PointsBarSize / maxPoints;
-        PointsBar.transform.localScale = new Vector3(0, 1, 0);
-
-        movepositionX = (PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2) / maxPoints;
-        Vector3 positionRect = PointsBar.GetComponent<RectTransform>().anchoredPosition;
-        positionRect.x = positionRect.x - PointsBar.GetComponent<RectTransform>().sizeDelta.x / 2;
-        PointsBar.transform.localPosition = positionRect;
-        maxPoints *= 100;
-
-        goalPoints[0] = maxPoints * 0.5f;
-        goalPoints[1] = maxPoints * 0.75f;
-        goalPoints[2] = maxPoints;
     }
     public void SumPoints(int Points)
     {

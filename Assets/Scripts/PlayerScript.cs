@@ -86,7 +86,7 @@ public class PlayerScript : MonoBehaviour
             return;
         }
 
-        if (gameManager.gamestate != GameManager.gameState.Ilde)
+        if (gameManager.gamestate != GameManager.gameState.Ilde || gameManager.gamestate != GameManager.gameState.onTutorial)
         {
             return;
         }

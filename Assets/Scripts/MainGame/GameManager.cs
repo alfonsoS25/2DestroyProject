@@ -67,6 +67,20 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int tutorialNumber;
 
+    [SerializeField]
+    private GameObject[] targets = null;
+
+    [SerializeField]
+    private Vector3[] targetPos = null;
+
+    private int targetID;
+
+    public int getTargetID
+    {
+        get { targetID++; return targetID-1;}
+        private set { targetID = value; }
+    }
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -169,6 +183,7 @@ public class GameManager : MonoBehaviour
                         break;
                     case 2:
                         StartCoroutine(generateText("ohyeah123"));
+                        GenerateTarget(0);
                         break;
                     case 3:
                         StartCoroutine(generateText("ohye346345ah"));
@@ -255,8 +270,31 @@ public class GameManager : MonoBehaviour
         Destroy(clone, 1f);
         gamestate = gameState.onTutorial;
     }
-    private void dasdasd(string textToShow)
+    private void GenerateTarget(int target)
     { 
-            
+        switch(target)
+        {
+            case 0:Instantiate(targets[0], targetPos[0], Quaternion.identity);
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+        }
     }
+
 }

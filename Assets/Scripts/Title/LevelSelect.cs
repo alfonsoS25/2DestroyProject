@@ -70,4 +70,8 @@ public class LevelSelect : MonoBehaviour
         LevelDirectory.Clear();
     }
 
+    public void loadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }

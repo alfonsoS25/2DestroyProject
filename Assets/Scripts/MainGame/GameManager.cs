@@ -39,6 +39,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject defeatMenu;
 
+    [SerializeField]
+    private bool isTutorial = false;
+
+    private string writeText = "";
+
+    [SerializeField]
+    private GameObject tutorialLevel;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -48,16 +56,26 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        if(isTutorial)
+        {
+            shootTries = 999;
+        }
+        StartCoroutine(generateText("Bienvenido a 2Destroy!"));
         uiAnim.Play("Start");
     }
 
     public void LoadScene()
     {
+        Vector3 hola = new Vector3(transform.position.x, transform.position.y, 60);
+        if (isTutorial)
+        {
+            Instantiate(tutorialLevel, hola, Quaternion.identity, stageRoot);
+            return;
+        }
         int randomnum = PlayerPrefs.GetInt("levelToPlay");
         int randomnum2 = randomnum / 3;
         randomnum = randomnum % 3;
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
-        Vector3 hola = new Vector3(transform.position.x, transform.position.y, 60);
         var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum), hola,Quaternion.identity,stageRoot);
         shootCounter.text = "shoots left: " + shootTries;
     }
@@ -79,7 +97,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(gamestate); 
+        //Debug.Log(gamestate); 
         if (!isDecided)
         {
             switch (gamestate)
@@ -150,5 +168,17 @@ public class GameManager : MonoBehaviour
         Debug.Log(Stars);
         isDecided = true;
         Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity,uIRoot);
+
+
+    }
+
+    private IEnumerator generateText(string textToShow)
+    {
+        for (int i = 0; i < textToShow.Length; i++)
+        {
+            writeText += textToShow[i];
+            Debug.Log(writeText);
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+        }
     }
 }

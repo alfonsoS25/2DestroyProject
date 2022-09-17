@@ -10,8 +10,6 @@ public class Drill : MonoBehaviour
     [SerializeField]
     private GameObject Explosion;
 
-    private bool IsGoingToExplode = false;
-
     [SerializeField]
     private float pushforce = 4f;
     bool IsDrag = false;

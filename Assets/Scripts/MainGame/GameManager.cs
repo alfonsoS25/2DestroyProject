@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
         GameClear,
         SelectingWeapon,
         onText,
+        onTutorial,
     }
+
 
     public gameState gamestate;
 
@@ -44,6 +46,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject defeatMenu;
 
+    private float counter = 0;
+
+    [Header("Tutorial")]
+
     [SerializeField]
     private bool isTutorial = false;
 
@@ -58,6 +64,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textToWrite;
 
+    [SerializeField]
+    private int tutorialNumber;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -67,10 +77,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        var clone = Instantiate(textSample, player.transform.position, Quaternion.identity,uIRoot);
-        textToWrite = clone.GetComponent<TextMeshProUGUI>();
-
-        StartCoroutine(generateText("Bienvenido a 2Destroy!"));
+        StartCoroutine(generateText("Welcome to 2Destroy!"));
         uiAnim.Play("Start");
     }
 
@@ -80,7 +87,7 @@ public class GameManager : MonoBehaviour
         if (isTutorial)
         {
             shootTries = 999;
-            Instantiate(tutorialLevel, stagePos, Quaternion.identity, stageRoot);
+            //Instantiate(tutorialLevel, stagePos, Quaternion.identity, stageRoot);
             return;
         }
         int randomnum = PlayerPrefs.GetInt("levelToPlay");
@@ -107,8 +114,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Debug.Log(gamestate); 
-        if (!isDecided)
+        if (!isTutorial)
         {
             switch (gamestate)
             {
@@ -125,10 +131,61 @@ public class GameManager : MonoBehaviour
                     break;
                 case gameState.onText:
                     break;
+                case gameState.onTutorial:
+                    onTutorialPhase();
+                    break;
             }
         }
     }
-    private float counter = 0;
+    private void Update()
+    {
+        
+        if (isTutorial)
+        {
+            switch (gamestate)
+            {
+                case gameState.onText:
+                    break;
+                case gameState.onTutorial:
+                    onTutorialPhase();
+                    break;
+            }
+        }
+    }
+
+    private void onTutorialPhase()
+    {
+        counter += Time.deltaTime;
+        if (counter > 2)
+        { 
+            if(Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("YES!");
+                tutorialNumber++;
+                switch (tutorialNumber)
+                {
+                    case 1:
+                        StartCoroutine(generateText("ohyeah"));
+                        break;
+                    case 2:
+                        StartCoroutine(generateText("ohyeah123"));
+                        break;
+                    case 3:
+                        StartCoroutine(generateText("ohye346345ah"));
+                        break;
+                    case 4:
+                        StartCoroutine(generateText("ohy5w3453245632eah"));
+                        break;
+                    case 5:
+                        StartCoroutine(generateText("ohyeargsdfgsaergsfgsfh"));
+                        break;
+                    case 6:
+                        StartCoroutine(generateText("ohgsaergaergae45q34512345yeah"));
+                        break;
+                }
+            }
+        }
+    }
     private void attacking()
     {
         counter += Time.deltaTime;
@@ -180,17 +237,26 @@ public class GameManager : MonoBehaviour
         Debug.Log(Stars);
         isDecided = true;
         Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity,uIRoot);
-
-
     }
 
     private IEnumerator generateText(string textToShow)
     {
+        gamestate = gameState.onText;
+        var clone = Instantiate(textSample, player.transform.position, Quaternion.identity, uIRoot);
+        textToWrite = clone.GetComponent<TextMeshProUGUI>();
         for (int i = 0; i < textToShow.Length; i++)
         {
             writeText += textToShow[i];
             textToWrite.text = writeText;
-             yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+            yield return new WaitForSeconds(Random.Range(0.05f, 0.15f));
         }
+        writeText = "";
+        textToWrite = null;
+        Destroy(clone, 1f);
+        gamestate = gameState.onTutorial;
+    }
+    private void dasdasd(string textToShow)
+    { 
+            
     }
 }

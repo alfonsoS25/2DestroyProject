@@ -91,7 +91,10 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(generateText("Welcome to 2Destroy!"));
+        if (isTutorial)
+        {
+            StartCoroutine(generateText("Welcome to 2Destroy!"));
+        }
         uiAnim.Play("Start");
     }
 
@@ -158,6 +161,9 @@ public class GameManager : MonoBehaviour
         {
             switch (gamestate)
             {
+                case gameState.Attacking:
+                    attacking();
+                    break;
                 case gameState.onText:
                     break;
                 case gameState.onTutorial:
@@ -207,7 +213,14 @@ public class GameManager : MonoBehaviour
         counter += Time.deltaTime;
         if (counter > 0.3f)//3)
         {
-            gamestate = gameState.Ilde;
+            if (isTutorial)
+            {
+                gamestate = gameState.onTutorial;
+            }
+            else
+            {
+                gamestate = gameState.Ilde;
+            }
             counter = 0;
             shootTries--;
             shootCounter.text = "shoots left: " + shootTries;

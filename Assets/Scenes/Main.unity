@@ -5146,6 +5146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33b3fc82cd0e244fa9186471c8f0620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 188023507}
   shootCounter: {fileID: 1885970444}
   pointManager: {fileID: 630042101}
   gamestate: 0
@@ -5155,6 +5156,13 @@ MonoBehaviour:
   uiAnim: {fileID: 151869115}
   clearMenu: {fileID: 780570798054082791, guid: cb071665a86d8cc40ba779ae16a87d37, type: 3}
   defeatMenu: {fileID: 780570798054082791, guid: c519d066e82dc08438eecd83ddd8edfa, type: 3}
+  isTutorial: 0
+  tutorialLevel: {fileID: 0}
+  textSample: {fileID: 0}
+  textToWrite: {fileID: 0}
+  tutorialNumber: 0
+  targets: []
+  targetPos: []
 --- !u!4 &599879784
 Transform:
   m_ObjectHideFlags: 0
@@ -5309,10 +5317,20 @@ MonoBehaviour:
   PointsBarSizeX: 0
   maxPoints: 0
   actualPoints: 0
+  Stars: []
+  isTutorial: 0
+  pointStar:
+  - isAlreadyObtained: 0
+    image: {fileID: 1847813432}
+  - isAlreadyObtained: 0
+    image: {fileID: 390934507}
+  - isAlreadyObtained: 0
+    image: {fileID: 674033935}
   goalPoints:
   - 0
   - 0
   - 0
+  starComplete: {fileID: 0}
 --- !u!1 &631979065
 GameObject:
   m_ObjectHideFlags: 0

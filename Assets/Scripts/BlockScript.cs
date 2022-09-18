@@ -114,7 +114,8 @@ public class BlockScript : MonoBehaviour
         }
     }
 
-        public void DestroyIntoBlocks()
+    
+    public void DestroyIntoBlocks()
     {
         if (!IsDestroyed)
         {

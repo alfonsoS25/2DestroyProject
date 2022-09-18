@@ -86,47 +86,46 @@ public class PlayerScript : MonoBehaviour
             return;
         }
 
-        if (gameManager.gamestate != GameManager.gameState.Ilde || gameManager.gamestate != GameManager.gameState.onTutorial)
+        if (gameManager.gamestate == GameManager.gameState.Ilde || gameManager.gamestate == GameManager.gameState.onTutorial)
         {
-            return;
-        }
-        gameManager.gamestate = GameManager.gameState.Attacking;
+            gameManager.gamestate = GameManager.gameState.Attacking;
 
-        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 dir = Input.mousePosition - pos;
-        Debug.DrawRay(transform.position, pos);
-        switch (Power)
-        {
-            case 0:
-                var GrenadeClone = Instantiate(Misile, transform.position, transform.rotation);
-                break;
-            case 1:
-                var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                DestroyerLaser.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                break;
-            case 2:
-                var BlackholeClone = Instantiate(BlackHole, worldPosition, transform.rotation);
-                 break;
-            case 3:
-                var wrekingBallClone = Instantiate(wrekingBall, worldPosition, transform.rotation);
-                Destroy(wrekingBallClone, 4f); 
-                break;
-            case 4:
-                var airStrikeClone = Instantiate(AirStrike, transform.position, transform.rotation);
-                break;
-            case 5:
-                var grenadeClne = Instantiate(Grenade, transform.position, transform.rotation);
-                break;
-            case 6:
-                var drillclone = Instantiate(drill, transform.position, transform.rotation);
-                break;
-            case 7:
-                var tankclone = Instantiate(tank, transform.position, transform.rotation);
-                break;
-            case 8:
-                var satelitalstrike = Instantiate(satelitalStrike, transform.position, transform.rotation);
-                break;
+            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+            Vector3 dir = Input.mousePosition - pos;
+            Debug.DrawRay(transform.position, pos);
+            switch (Power)
+            {
+                case 0:
+                    var GrenadeClone = Instantiate(Misile, transform.position, transform.rotation);
+                    break;
+                case 1:
+                    var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    DestroyerLaser.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                    break;
+                case 2:
+                    var BlackholeClone = Instantiate(BlackHole, worldPosition, transform.rotation);
+                    break;
+                case 3:
+                    var wrekingBallClone = Instantiate(wrekingBall, worldPosition, transform.rotation);
+                    Destroy(wrekingBallClone, 4f);
+                    break;
+                case 4:
+                    var airStrikeClone = Instantiate(AirStrike, transform.position, transform.rotation);
+                    break;
+                case 5:
+                    var grenadeClne = Instantiate(Grenade, transform.position, transform.rotation);
+                    break;
+                case 6:
+                    var drillclone = Instantiate(drill, transform.position, transform.rotation);
+                    break;
+                case 7:
+                    var tankclone = Instantiate(tank, transform.position, transform.rotation);
+                    break;
+                case 8:
+                    var satelitalstrike = Instantiate(satelitalStrike, transform.position, transform.rotation);
+                    break;
+            }
         }
 
     }
@@ -138,44 +137,42 @@ public class PlayerScript : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector3 TouchPos = Camera.main.ScreenToWorldPoint(touch.position);
-
+            
             if (CheckDistance(TouchPos))
             {
                 return;
             }
-            if (gameManager.gamestate != GameManager.gameState.Ilde)
+            if (gameManager.gamestate == GameManager.gameState.Ilde  || gameManager.gamestate == GameManager.gameState.onTutorial)
             {
-                return;
-            }
-            gameManager.gamestate = GameManager.gameState.Attacking;
-            TouchPos.z = 0f;
-            switch (Power)
-            {
-                case 0:
-                    var BombClone = Instantiate(Misile, TouchPos, transform.rotation);
-                    Destroy(BombClone, 0.1f); break;
-                case 1:
+                gameManager.gamestate = GameManager.gameState.Attacking;
+                TouchPos.z = 0f;
+                switch (Power)
+                {
+                    case 0:
+                        var BombClone = Instantiate(Misile, TouchPos, transform.rotation);
+                        Destroy(BombClone, 0.1f); break;
+                    case 1:
+                        var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
+                        //DestroyerLaser.transform.position = new Vector3(transform.position.x + (transform.localScale.x / 2), transform.position.y, transform.position.z);
 
-                    var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
-                    //DestroyerLaser.transform.position = new Vector3(transform.position.x + (transform.localScale.x / 2), transform.position.y, transform.position.z);
-
-                    Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
-                    Vector3 dir = Camera.main.ScreenToWorldPoint(touch.position) - pos;
-                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    DestroyerLaser.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                    break;
-                case 2:
-                    var BlackholeClone = Instantiate(BlackHole, TouchPos, transform.rotation);
-                    Destroy(BlackholeClone, 0.4f); break;
-                case 3:
-                    var wrekingBallClone = Instantiate(wrekingBall, TouchPos, transform.rotation);
-                    Destroy(wrekingBallClone, 4f); break;
-                case 4:
-                    var airStrikeClone = Instantiate(AirStrike, TouchPos, transform.rotation);
-                    break;
-                case 5:
-                    var grenadeClne = Instantiate(Grenade, TouchPos, transform.rotation);
-                    break;
+                        Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
+                        Vector3 dir = Camera.main.ScreenToWorldPoint(touch.position) - pos;
+                        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                        DestroyerLaser.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                        break;
+                    case 2:
+                        var BlackholeClone = Instantiate(BlackHole, TouchPos, transform.rotation);
+                        Destroy(BlackholeClone, 0.4f); break;
+                    case 3:
+                        var wrekingBallClone = Instantiate(wrekingBall, TouchPos, transform.rotation);
+                        Destroy(wrekingBallClone, 4f); break;
+                    case 4:
+                        var airStrikeClone = Instantiate(AirStrike, TouchPos, transform.rotation);
+                        break;
+                    case 5:
+                        var grenadeClne = Instantiate(Grenade, TouchPos, transform.rotation);
+                        break;
+                }
             }
         }
     }

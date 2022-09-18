@@ -75,11 +75,16 @@ public class GameManager : MonoBehaviour
 
     private int targetID;
 
+    [SerializeField]
+    private GameObject _pressToContinueTab;
+
     public int getTargetID
     {
         get { targetID++; return targetID-1;}
         private set { targetID = value; }
     }
+
+    public int targetCounter = 0;
 
 
     // Start is called before the first frame update
@@ -93,7 +98,7 @@ public class GameManager : MonoBehaviour
     {
         if (isTutorial)
         {
-            StartCoroutine(generateText("Welcome to 2Destroy!"));
+            StartCoroutine(generateText("Welcome to 2Destroy!", false));
         }
         uiAnim.Play("Start");
     }
@@ -168,7 +173,6 @@ public class GameManager : MonoBehaviour
                     break;
                 case gameState.onTutorial:
                     onTutorialPhase();
-                    GenerateTarget(0);
                     break;
             }
         }
@@ -181,46 +185,50 @@ public class GameManager : MonoBehaviour
         { 
             if(Input.GetMouseButtonDown(0))
             {
-                Debug.Log("YES!");
                 tutorialNumber++;
                 switch (tutorialNumber)
                 {
                     case 1:
-                        StartCoroutine(generateText("ohyeah"));
+                        StartCoroutine(generateText("ohyeah", false));
                         break;
                     case 2:
-                        StartCoroutine(generateText("ohyeah123"));
+                        StartCoroutine(generateText("ohyeah123", true));
                         GenerateTarget(0);
                         break;
                     case 3:
-                        StartCoroutine(generateText("ohye346345ah"));
+                        StartCoroutine(generateText("ohye346345ah", false));
                         break;
                     case 4:
-                        StartCoroutine(generateText("ohy5w3453245632eah"));
+                        StartCoroutine(generateText("ohy5w3453245632eah", false));
                         break;
                     case 5:
-                        StartCoroutine(generateText("ohyeargsdfgsaergsfgsfh"));
+                        StartCoroutine(generateText("ohyeargsdfgsaergsfgsfh", false));
                         break;
                     case 6:
-                        StartCoroutine(generateText("ohgsaergaergae45q34512345yeah"));
+                        StartCoroutine(generateText("ohgsaergaergae45q34512345yeah",false));
                         break;
                 }
             }
         }
+    }
+    private void showPressToContinue()
+    {
+        _pressToContinueTab.SetActive(true);
+    }
+    public IEnumerator targetDestroyed()
+    {
+        gamestate = gameState.onTutorial;
+        yield return new WaitForSeconds(1.4f);
+        showPressToContinue();
     }
     private void attacking()
     {
         counter += Time.deltaTime;
         if (counter > 0.3f)//3)
         {
-            if (isTutorial)
-            {
-                gamestate = gameState.onTutorial;
-            }
-            else
-            {
-                gamestate = gameState.Ilde;
-            }
+            
+            gamestate = gameState.Ilde;
+            
             counter = 0;
             shootTries--;
             shootCounter.text = "shoots left: " + shootTries;
@@ -268,8 +276,9 @@ public class GameManager : MonoBehaviour
         Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity,uIRoot);
     }
 
-    private IEnumerator generateText(string textToShow)
+    private IEnumerator generateText(string textToShow,bool IsAttackNext)
     {
+        _pressToContinueTab.SetActive(false);
         gamestate = gameState.onText;
         var clone = Instantiate(textSample, player.transform.position, Quaternion.identity, uIRoot);
         textToWrite = clone.GetComponent<TextMeshProUGUI>();
@@ -282,7 +291,15 @@ public class GameManager : MonoBehaviour
         writeText = "";
         textToWrite = null;
         Destroy(clone, 1f);
-        gamestate = gameState.onTutorial;
+        if (IsAttackNext)
+        {
+            gamestate = gameState.Ilde;
+        }
+        else
+        {
+            gamestate = gameState.onTutorial;
+            _pressToContinueTab.SetActive(true);
+        }
     }
     private void GenerateTarget(int target)
     { 

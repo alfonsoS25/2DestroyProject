@@ -43,6 +43,8 @@ public class Target : MonoBehaviour
                     RigAttach.angularDrag = _rig.angularVelocity;
                 }
             }
+            _gameManager.targetCounter++;
+            _gameManager.StartCoroutine(_gameManager.targetDestroyed());
             Destroy(this.gameObject);
         }
     }

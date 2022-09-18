@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -152,6 +156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -218,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -284,6 +296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -412,6 +428,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99fcda0030f59884386a0b5f437b0d32, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -478,6 +502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -544,6 +576,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -672,6 +712,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd27e5ce7bac8d945a4bf5c59b82d295, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -738,6 +786,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99fcda0030f59884386a0b5f437b0d32, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -804,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -870,6 +930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -936,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd27e5ce7bac8d945a4bf5c59b82d295, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1002,6 +1070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0bf08a4dc42cf2d479a30f301b5990a4, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1068,6 +1140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1196,6 +1272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1262,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1328,6 +1412,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1394,6 +1486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1460,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1526,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1592,6 +1696,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1658,6 +1770,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1724,6 +1844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1790,6 +1914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1856,6 +1984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1922,6 +2054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abf555bdf2449b146800b7074f53e02f, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -1988,6 +2124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1
@@ -2054,6 +2194,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: towerBlock (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306875674975149297, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96951ac95bb3cd49bf0b295e45bae70, type: 3}
     - target: {fileID: 7306875674975149298, guid: 32d0a3d32dc53fb4c8a81ad076df8a25, type: 3}
       propertyPath: _isTutorial
       value: 1

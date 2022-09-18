@@ -7576,12 +7576,12 @@ MonoBehaviour:
   _playerWeapons:
   - {fileID: 21300000, guid: e37fc099e21ec4f42b1230c397a75d28, type: 3}
   - {fileID: 0}
+  - {fileID: 21300000, guid: 942cdea1c66e4e546ac7e7cdfd4f5f9d, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: c77db760f9f93034a8a4fb949b718369, type: 3}
   - {fileID: 0}
   _weaponBoxAnimator: {fileID: 2056912483}
   _weaponBox: {fileID: 2056912481}

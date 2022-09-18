@@ -338,6 +338,7 @@ public class GameManager : MonoBehaviour
                 Instantiate(_target[3].targetObject, _target[3].targetPos, Quaternion.identity);
                 break;
             case 3:
+                Instantiate(_target[4].targetObject, _target[4].targetPos, Quaternion.identity);
                 break;
             case 4:
                 break;

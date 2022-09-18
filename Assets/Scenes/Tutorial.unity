@@ -362,6 +362,7 @@ RectTransform:
   m_Children:
   - {fileID: 7261700}
   - {fileID: 1130359181}
+  - {fileID: 1334855295}
   - {fileID: 1527408112}
   - {fileID: 2056912482}
   - {fileID: 750188415}
@@ -562,6 +563,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &48866584
 Rigidbody2D:
   serializedVersion: 4
@@ -714,6 +716,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &58611536
 Rigidbody2D:
   serializedVersion: 4
@@ -997,6 +1000,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &74578807
 Rigidbody2D:
   serializedVersion: 4
@@ -1149,6 +1153,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &76390441
 Rigidbody2D:
   serializedVersion: 4
@@ -1350,6 +1355,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &125824346
 Rigidbody2D:
   serializedVersion: 4
@@ -1923,7 +1929,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 31038081}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1984,6 +1990,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &276788876
 Rigidbody2D:
   serializedVersion: 4
@@ -2768,6 +2775,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &485058266
 Rigidbody2D:
   serializedVersion: 4
@@ -2920,6 +2928,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &512255071
 Rigidbody2D:
   serializedVersion: 4
@@ -3072,6 +3081,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &587908249
 Rigidbody2D:
   serializedVersion: 4
@@ -3332,6 +3342,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &598501724
 Rigidbody2D:
   serializedVersion: 4
@@ -3484,6 +3495,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &603729470
 Rigidbody2D:
   serializedVersion: 4
@@ -3767,6 +3779,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &636175573
 Rigidbody2D:
   serializedVersion: 4
@@ -4455,7 +4468,7 @@ RectTransform:
   m_Children:
   - {fileID: 1765188227}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4622,6 +4635,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &759075558
 Rigidbody2D:
   serializedVersion: 4
@@ -5944,7 +5958,7 @@ RectTransform:
   m_Children:
   - {fileID: 1521806525}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6019,7 +6033,7 @@ RectTransform:
   m_Children:
   - {fileID: 663275814}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6260,6 +6274,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1003991128
 Rigidbody2D:
   serializedVersion: 4
@@ -6674,6 +6689,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1017141151
 Rigidbody2D:
   serializedVersion: 4
@@ -6816,12 +6832,20 @@ MonoBehaviour:
   textSample: {fileID: 8282966420647923972, guid: 5e7511fb53ce86e43a2ec171bc1658e9, type: 3}
   textToWrite: {fileID: 0}
   tutorialNumber: 0
-  targets:
-  - {fileID: 7306875674975149293, guid: 9f4daa2cadb19bf4591a959f345e6102, type: 3}
-  targetPos:
-  - {x: 5, y: -3, z: 0}
+  _target:
+  - targetObject: {fileID: 7306875674975149293, guid: 9f4daa2cadb19bf4591a959f345e6102, type: 3}
+    targetPos: {x: 10, y: -6, z: 0}
+  - targetObject: {fileID: 7306875674975149293, guid: 9f4daa2cadb19bf4591a959f345e6102, type: 3}
+    targetPos: {x: 5, y: -6, z: 0}
+  - targetObject: {fileID: 7306875674975149293, guid: 9f4daa2cadb19bf4591a959f345e6102, type: 3}
+    targetPos: {x: -5, y: -6, z: 0}
+  - targetObject: {fileID: 4057914069711750009, guid: a875fa52eda51674586b73350cece8af, type: 3}
+    targetPos: {x: 13.3, y: 5, z: 0}
+  - targetObject: {fileID: 7964899194836241276, guid: 183e93985792e0042b27c5e9ef2133c4, type: 3}
+    targetPos: {x: 13.3, y: 5, z: 0}
   _pressToContinueTab: {fileID: 910094520}
   targetCounter: 0
+  leaveTutorial: {fileID: 0}
 --- !u!4 &1017864783
 Transform:
   m_ObjectHideFlags: 0
@@ -7100,6 +7124,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1079330964
 Rigidbody2D:
   serializedVersion: 4
@@ -7252,6 +7277,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1110298252
 Rigidbody2D:
   serializedVersion: 4
@@ -7404,6 +7430,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1110652733
 Rigidbody2D:
   serializedVersion: 4
@@ -7557,6 +7584,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _weaponBoxAnimator: {fileID: 2056912483}
+  _weaponBox: {fileID: 2056912481}
 --- !u!4 &1111251463
 Transform:
   m_ObjectHideFlags: 0
@@ -8066,6 +8094,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290862589}
   m_CullTransparentMesh: 1
+--- !u!1 &1334855294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334855295}
+  - component: {fileID: 1334855297}
+  - component: {fileID: 1334855296}
+  m_Layer: 5
+  m_Name: BackgroundFader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1334855295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334855294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1868972531}
+  m_Father: {fileID: 31038081}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.0025024}
+  m_SizeDelta: {x: 2560, y: 1440}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1334855296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334855294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.047169805, g: 0.042942323, b: 0.042942323, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1334855297
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334855294}
+  m_CullTransparentMesh: 1
 --- !u!1 &1341177113
 GameObject:
   m_ObjectHideFlags: 0
@@ -8459,7 +8563,7 @@ RectTransform:
   m_Children:
   - {fileID: 1354268248}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8681,6 +8785,7 @@ MonoBehaviour:
   breakForceCollision: 1
   pointM: {fileID: 0}
   BlockClass: 0
+  _isTutorial: 0
 --- !u!50 &1422321318
 Rigidbody2D:
   serializedVersion: 4
@@ -9701,18 +9806,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2056912481}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1111251462}
         m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
         m_MethodName: ChooceWeapon
@@ -9776,7 +9869,7 @@ RectTransform:
   m_Children:
   - {fileID: 1983739512}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10044,6 +10137,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1600256373
 Rigidbody2D:
   serializedVersion: 4
@@ -10497,6 +10591,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &1735737166
 Rigidbody2D:
   serializedVersion: 4
@@ -11074,6 +11169,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1868972530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1868972531}
+  - component: {fileID: 1868972533}
+  - component: {fileID: 1868972532}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1868972531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868972530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1334855295}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1049, y: 243.05}
+  m_SizeDelta: {x: 404.16, y: 486.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1868972532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868972530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.23529412}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1868972533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868972530}
+  m_CullTransparentMesh: 1
 --- !u!1 &1874490239
 GameObject:
   m_ObjectHideFlags: 0
@@ -11237,6 +11407,7 @@ MonoBehaviour:
   breakForceCollision: 1
   pointM: {fileID: 0}
   BlockClass: 0
+  _isTutorial: 0
 --- !u!50 &1887171080
 Rigidbody2D:
   serializedVersion: 4
@@ -11833,6 +12004,7 @@ MonoBehaviour:
   breakForceCollision: 1
   pointM: {fileID: 0}
   BlockClass: 0
+  _isTutorial: 0
 --- !u!50 &1954512446
 Rigidbody2D:
   serializedVersion: 4
@@ -12315,7 +12487,7 @@ RectTransform:
   - {fileID: 807563087}
   - {fileID: 1934466056}
   m_Father: {fileID: 31038081}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12433,6 +12605,7 @@ MonoBehaviour:
   breakForceCollision: 1
   pointM: {fileID: 0}
   BlockClass: 0
+  _isTutorial: 0
 --- !u!50 &2066960837
 Rigidbody2D:
   serializedVersion: 4
@@ -12585,6 +12758,7 @@ MonoBehaviour:
   breakForceCollision: 10
   pointM: {fileID: 0}
   BlockClass: 3
+  _isTutorial: 0
 --- !u!50 &2077419275
 Rigidbody2D:
   serializedVersion: 4

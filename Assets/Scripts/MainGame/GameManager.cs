@@ -67,11 +67,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int tutorialNumber;
 
-    [SerializeField]
-    private GameObject[] targets = null;
+    [System.Serializable]
+    public struct target
+    {
+        public GameObject targetObject;
 
+        public Vector3 targetPos;
+    }
     [SerializeField]
-    private Vector3[] targetPos = null;
+    private target[] _target;
 
     private int targetID;
 
@@ -84,8 +88,10 @@ public class GameManager : MonoBehaviour
         private set { targetID = value; }
     }
 
-    public int targetCounter = 0;
+    public int targetCounter = 1;
 
+    [SerializeField]
+    private GameObject leaveTutorial;
 
     // Start is called before the first frame update
     private void Awake()
@@ -193,7 +199,7 @@ public class GameManager : MonoBehaviour
                         break;
                     case 2:
                         StartCoroutine(generateText("Lets Try Destroying That Dummy", true));
-                        GenerateTarget(0);
+                        GenerateTargetRound(0);
                         break;
                     case 3:
                         StartCoroutine(generateText("Nice Shot!", false));
@@ -205,8 +211,20 @@ public class GameManager : MonoBehaviour
                         StartCoroutine(generateText("check the weapon box behind me, you can take what you want this time", false));
                         break;
                     case 6:
-                        StartCoroutine(generateText("now lets destroy them!", false));
-                      
+                        StartCoroutine(generateText("now lets destroy them!", true));
+                        GenerateTargetRound(1);
+                        break;
+                    case 7:
+                        StartCoroutine(generateText("Lets go another round!", true));
+                        GenerateTargetRound(2);
+                        break;
+                    case 8:
+                        StartCoroutine(generateText("seems like you got what its need", true));
+                        GenerateTargetRound(3);
+                        break;
+                    case 9:
+                        StartCoroutine(generateText("this is the last time", true));
+                        GenerateTargetRound(4);
                         break;
                 }
             }
@@ -218,9 +236,13 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator targetDestroyed()
     {
-        gamestate = gameState.onTutorial;
         yield return new WaitForSeconds(1.4f);
-        showPressToContinue();
+        if(targetCounter >= targetID)
+        {
+            Debug.Log("Yes");
+            showPressToContinue();
+            gamestate = gameState.onTutorial;
+        }
     }
     private void attacking()
     {
@@ -287,7 +309,7 @@ public class GameManager : MonoBehaviour
         {
             writeText += textToShow[i];
             textToWrite.text = writeText;
-            yield return new WaitForSeconds(Random.Range(0.05f, 0.15f));
+            yield return new WaitForSeconds(Random.Range(0.04f, 0.08f));
         }
         writeText = "";
         textToWrite = null;
@@ -302,15 +324,18 @@ public class GameManager : MonoBehaviour
             _pressToContinueTab.SetActive(true);
         }
     }
-    private void GenerateTarget(int target)
+    private void GenerateTargetRound(int targetToGenerate)
     { 
-        switch(target)
+        switch(targetToGenerate)
         {
-            case 0:Instantiate(targets[0], targetPos[0], Quaternion.identity);
+            case 0:Instantiate(_target[0].targetObject,_target[0].targetPos, Quaternion.identity);
                 break;
             case 1:
+                Instantiate(_target[1].targetObject, _target[1].targetPos, Quaternion.identity);
+                Instantiate(_target[2].targetObject, _target[2].targetPos, Quaternion.identity);
                 break;
             case 2:
+                Instantiate(_target[3].targetObject, _target[3].targetPos, Quaternion.identity);
                 break;
             case 3:
                 break;

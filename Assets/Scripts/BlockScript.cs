@@ -27,10 +27,16 @@ public class BlockScript : MonoBehaviour
     [SerializeField]
     private int BlockClass;
 
+    [SerializeField]
+    private bool _isTutorial;
+
     // Start is called before the first frame update
     void Start()
     {
-        pointM = GameObject.FindGameObjectWithTag("PointCounter").GetComponent<PointManager>();
+        if (!_isTutorial)
+        {
+            pointM = GameObject.FindGameObjectWithTag("PointCounter").GetComponent<PointManager>();
+        }
         particlemann = GameObject.FindGameObjectWithTag("ParticleManager").GetComponent<ParticleManager>();
         rig = GetComponent<Rigidbody2D>();
 
@@ -109,7 +115,10 @@ public class BlockScript : MonoBehaviour
         if (!IsDestroyed)
         {
             IsDestroyed = true;
-            pointM.SumPoints(100);
+            if (!_isTutorial)
+            {
+                pointM.SumPoints(100);
+            }
             Destroy(this.gameObject);
         }
     }
@@ -135,7 +144,10 @@ public class BlockScript : MonoBehaviour
                     RigAttach.angularDrag = rig.angularVelocity;
                 }
             }
-            pointM.SumPoints(100);
+            if (!_isTutorial)
+            {
+                pointM.SumPoints(100);
+            }
             Destroy(this.gameObject);
             IsDestroyed = true;
         }

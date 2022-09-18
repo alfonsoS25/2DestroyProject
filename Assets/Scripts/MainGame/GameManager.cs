@@ -189,23 +189,24 @@ public class GameManager : MonoBehaviour
                 switch (tutorialNumber)
                 {
                     case 1:
-                        StartCoroutine(generateText("ohyeah", false));
+                        StartCoroutine(generateText("Your Goal Is To Destroy My Enemy Constructions", false));
                         break;
                     case 2:
-                        StartCoroutine(generateText("ohyeah123", true));
+                        StartCoroutine(generateText("Lets Try Destroying That Dummy", true));
                         GenerateTarget(0);
                         break;
                     case 3:
-                        StartCoroutine(generateText("ohye346345ah", false));
+                        StartCoroutine(generateText("Nice Shot!", false));
                         break;
                     case 4:
-                        StartCoroutine(generateText("ohy5w3453245632eah", false));
+                        StartCoroutine(generateText("There are a lot of weapons to try", false));
                         break;
                     case 5:
-                        StartCoroutine(generateText("ohyeargsdfgsaergsfgsfh", false));
+                        StartCoroutine(generateText("check the weapon box behind me, you can take what you want this time", false));
                         break;
                     case 6:
-                        StartCoroutine(generateText("ohgsaergaergae45q34512345yeah",false));
+                        StartCoroutine(generateText("now lets destroy them!", false));
+                      
                         break;
                 }
             }

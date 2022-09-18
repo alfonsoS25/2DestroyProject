@@ -28,6 +28,8 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private Sprite[] _playerWeapons;
 
+    [SerializeField]
+    private Animator _weaponBoxAnimator;
     // Update is called once per frame
     private bool CheckDistance(Vector3 pressed)
     {
@@ -189,10 +191,12 @@ public class PlayerScript : MonoBehaviour
         if (gameManager.gamestate == GameManager.gameState.Ilde || gameManager.gamestate == GameManager.gameState.Attacking)
         {
             gameManager.gamestate = GameManager.gameState.SelectingWeapon;
-        }
+            _weaponBoxAnimator.Play("Entering");
+        } //check box 
         else
         {
             gameManager.gamestate = GameManager.gameState.Ilde;
+            _weaponBoxAnimator.Play("Leaving");
         }
 
     }

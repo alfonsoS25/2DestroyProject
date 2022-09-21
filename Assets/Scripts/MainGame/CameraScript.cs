@@ -92,11 +92,11 @@ public class CameraScript : MonoBehaviour
     }
 
     
-    public void startCameraShake()
+    public void startCameraShake(float power)
     {
         savePos = transform.position;
         camState = cameraState.CameraShake;
-        shakeTime = shakeTimeSet;
+        shakeTime = power;
     }
 
         private void playerFocus()

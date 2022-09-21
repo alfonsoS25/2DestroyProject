@@ -9781,11 +9781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64721b1ffa77b428b7de1a046ecf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotsNumber: 100
+  dotsNumber: 10
   dotsParent: {fileID: 221422286}
   dotPrefab: {fileID: 5814778218561267645, guid: 22bdc294b17bcb344845e340fbaf5a2e, type: 3}
   dotSpaceing: 0.1
   pos: {x: 0, y: 0}
+  fade: 0
 --- !u!4 &1363510422
 Transform:
   m_ObjectHideFlags: 0

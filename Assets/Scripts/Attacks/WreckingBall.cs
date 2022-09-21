@@ -17,7 +17,7 @@ public class WreckingBall : MonoBehaviour
     {
         if(collision.gameObject.layer == _layer)
         {
-            _cameraScript.startCameraShake();
+            _cameraScript.startCameraShake(1.3f);
         }
     }
 }

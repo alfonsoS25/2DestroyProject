@@ -114,7 +114,7 @@ public class SatelitalStrike : MonoBehaviour
         satelitalMmark.transform.position = pos;
         yield return new WaitForSeconds(3);
         pos.y += 15f;
-        _cameraScript.startCameraShake();
+        _cameraScript.startCameraShake(2f);
         var BombClone = Instantiate(satelitalLaser, satelitalMmark.transform.position, Quaternion.identity);
         BombClone.GetComponent<Transform>().transform.rotation = Quaternion.Euler(0, 0, -90);
         Destroy(satelitalMmark);

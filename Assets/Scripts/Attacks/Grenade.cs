@@ -120,7 +120,7 @@ public class Grenade : MonoBehaviour
     private IEnumerator Explode()
     {
         yield return new WaitForSeconds(timeToExplode);
-        _cameraScript.startCameraShake();
+        _cameraScript.startCameraShake(1f);
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(BombClone, 0.1f);

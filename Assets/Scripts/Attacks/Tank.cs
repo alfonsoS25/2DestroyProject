@@ -31,7 +31,7 @@ public class Tank : MonoBehaviour
 
         if (hit)
         {
-            _cameraScript.startCameraShake();
+            _cameraScript.startCameraShake(1.4f);
             var clone = Instantiate(Explosion, hit.transform.position, Quaternion.identity);
             Destroy(clone, 0.1f);
         }

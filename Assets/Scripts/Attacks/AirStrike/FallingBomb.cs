@@ -43,7 +43,7 @@ public class FallingBomb : MonoBehaviour
 
     private void Explode()
     {
-        _cameraScript.startCameraShake();
+        _cameraScript.startCameraShake(1.3f);
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(BombClone, 0.1f);

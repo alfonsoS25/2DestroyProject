@@ -30,9 +30,11 @@ public class SatelitalStrike : MonoBehaviour
 
     private bool isShooted = false;
 
+    private CameraScript _cameraScript;
 
     void Start()
     {
+        _cameraScript = Camera.main.gameObject.GetComponent<CameraScript>();
         DotsGen = GameObject.FindGameObjectWithTag("DotMan").gameObject.GetComponent<DotsGenerator>();
         cam = Camera.main;
         OnDragStart();
@@ -112,6 +114,7 @@ public class SatelitalStrike : MonoBehaviour
         satelitalMmark.transform.position = pos;
         yield return new WaitForSeconds(3);
         pos.y += 15f;
+        _cameraScript.startCameraShake();
         var BombClone = Instantiate(satelitalLaser, satelitalMmark.transform.position, Quaternion.identity);
         BombClone.GetComponent<Transform>().transform.rotation = Quaternion.Euler(0, 0, -90);
         Destroy(satelitalMmark);

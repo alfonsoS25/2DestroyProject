@@ -31,9 +31,11 @@ public class Grenade : MonoBehaviour
     [SerializeField]
     private float timeToExplode = 3;
 
+    private CameraScript _cameraScript;
 
     void Start()
     {
+        _cameraScript = Camera.main.gameObject.GetComponent<CameraScript>();
         DotsGen = GameObject.FindGameObjectWithTag("DotMan").gameObject.GetComponent<DotsGenerator>();
         cam = Camera.main;
         OnDragStart();
@@ -118,6 +120,7 @@ public class Grenade : MonoBehaviour
     private IEnumerator Explode()
     {
         yield return new WaitForSeconds(timeToExplode);
+        _cameraScript.startCameraShake();
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(BombClone, 0.1f);

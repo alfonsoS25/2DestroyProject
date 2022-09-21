@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a64721b1ffa77b428b7de1a046ecf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotsNumber: 100
+  dotsNumber: 10
   dotsParent: {fileID: 1879853471}
   dotPrefab: {fileID: 5814778218561267645, guid: 22bdc294b17bcb344845e340fbaf5a2e, type: 3}
   dotSpaceing: 0.1
@@ -6842,7 +6842,7 @@ MonoBehaviour:
   - targetObject: {fileID: 4057914069711750009, guid: a875fa52eda51674586b73350cece8af, type: 3}
     targetPos: {x: 13.3, y: 5, z: 0}
   - targetObject: {fileID: 7964899194836241276, guid: 183e93985792e0042b27c5e9ef2133c4, type: 3}
-    targetPos: {x: 13.3, y: 5, z: 0}
+    targetPos: {x: 4, y: 5, z: 0}
   _pressToContinueTab: {fileID: 910094520}
   targetCounter: 0
   leaveTutorial: {fileID: 0}

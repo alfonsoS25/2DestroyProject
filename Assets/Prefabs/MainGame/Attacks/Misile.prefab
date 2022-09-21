@@ -145,4 +145,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 8873629958316825624, guid: 0034197b9eb1f4f40a0d5790ae9e717d, type: 3}
-  Speed: 60
+  _cameraScript: {fileID: 0}
+  Speed: 30

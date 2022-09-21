@@ -11,6 +11,13 @@ public class FallingBomb : MonoBehaviour
     private GameObject Explosion;
 
     private bool IsGoingToExplode = false;
+
+    private CameraScript _cameraScript;
+
+    private void Start()
+    {
+        _cameraScript = Camera.main.gameObject.GetComponent<CameraScript>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject)
@@ -36,6 +43,7 @@ public class FallingBomb : MonoBehaviour
 
     private void Explode()
     {
+        _cameraScript.startCameraShake();
         var BombClone = Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(BombClone, 0.1f);

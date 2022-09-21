@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6887148946898070932}
   - component: {fileID: 6887148946898070934}
   - component: {fileID: 1219845606415898956}
+  - component: {fileID: 5361044871103970726}
   m_Layer: 0
   m_Name: wrecking ball
   m_TagString: DemolitionBall
@@ -121,3 +122,19 @@ CircleCollider2D:
   m_Offset: {x: 0.0022133193, y: -0.114533745}
   serializedVersion: 2
   m_Radius: 0.56608963
+--- !u!114 &5361044871103970726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887148946898070935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe27e5ef1a673c4479a73fbff24671d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 64
+  _cameraScript: {fileID: 0}

@@ -16,8 +16,11 @@ public class Tank : MonoBehaviour
 
     [SerializeField]
     private LayerMask layer;
+
+    private CameraScript _cameraScript;
     void Start()
     {
+        _cameraScript = Camera.main.gameObject.GetComponent<CameraScript>();
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition.z = 0;
         target = worldPosition-transform.position;
@@ -28,6 +31,7 @@ public class Tank : MonoBehaviour
 
         if (hit)
         {
+            _cameraScript.startCameraShake();
             var clone = Instantiate(Explosion, hit.transform.position, Quaternion.identity);
             Destroy(clone, 0.1f);
         }

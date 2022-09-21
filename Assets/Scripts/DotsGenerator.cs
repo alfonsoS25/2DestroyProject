@@ -5,10 +5,11 @@ using UnityEngine;
 public class DotsGenerator : MonoBehaviour
 {
 
-    [SerializeField] private int dotsNumber;
+    [SerializeField] private float dotsNumber;
     [SerializeField] GameObject dotsParent;
     [SerializeField] GameObject dotPrefab;
     [SerializeField] float dotSpaceing;
+    
 
     Transform[] dotsList;
 
@@ -17,20 +18,25 @@ public class DotsGenerator : MonoBehaviour
     Vector2 pos;
 
     float timeStamp;
+
+    [SerializeField]
+    private float fade;
     // Start is called before the first frame update
     void Start()
     {
+        fade = dotsNumber / dotsNumber / dotsNumber;
         PrepareDots();
         Hide();
-        
     }
 
     void PrepareDots()
     {
-        dotsList = new Transform[dotsNumber];
+        dotsList = new Transform[(int)dotsNumber];
         for(int i = 0; i < dotsNumber;i++)
         {
-            dotsList[i] = Instantiate(dotPrefab, null).transform;
+            var Generated = Instantiate(dotPrefab, null);
+            Generated.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1 - ( fade*i));
+            dotsList[i] = Generated.transform;
             dotsList[i].parent = dotsParent.transform;
         }
     }

@@ -92,7 +92,7 @@ public class CameraScript : MonoBehaviour
     }
 
     
-    public void startCameraShake(float power)
+    public void startCameraShake(float power = 1f)
     {
         savePos = transform.position;
         camState = cameraState.CameraShake;

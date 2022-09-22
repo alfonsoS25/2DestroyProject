@@ -7,16 +7,17 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private GameObject Char;
     // Start is called before the first frame update
-    [SerializeField]    private GameObject Misile;
-    [SerializeField]    private GameObject BlackHole;
-    [SerializeField]    private GameObject Laser;
-    [SerializeField]    private GameObject wrekingBall;
-    [SerializeField]    private GameObject Grenade;
-    [SerializeField]    private GameObject AirStrike;
-    [SerializeField]    private GameObject satelitalStrike;
-    [SerializeField]    private GameObject drill;
-    [SerializeField]    private GameObject tank;
-    [SerializeField]    private GameManager gameManager;
+    [SerializeField] private GameObject Misile;
+    [SerializeField] private GameObject BlackHole;
+    [SerializeField] private GameObject Laser;
+    [SerializeField] private GameObject wrekingBall;
+    [SerializeField] private GameObject Grenade;
+    [SerializeField] private GameObject AirStrike;
+    [SerializeField] private GameObject satelitalStrike;
+    [SerializeField] private GameObject drill;
+    [SerializeField] private GameObject tank;
+    [SerializeField] private GameObject grappel; 
+    [SerializeField] private GameManager gameManager;
 
     [SerializeField]
     private int Power;
@@ -128,6 +129,9 @@ public class PlayerScript : MonoBehaviour
                     break;
                 case 8:
                     var satelitalstrike = Instantiate(satelitalStrike, transform.position, transform.rotation);
+                    break;
+                case 9:
+                    var grapple = Instantiate(grappel, transform.position, transform.rotation);
                     break;
             }
         }

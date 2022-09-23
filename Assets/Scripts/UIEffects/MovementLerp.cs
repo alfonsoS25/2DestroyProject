@@ -3,30 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementLerp : MonoBehaviour
-{/*
-    Vector3 startPos;
+{
+    [SerializeField]
+    private float xoffset=0;
+    [SerializeField]
+    private float yoffset=0;
 
     [SerializeField]
-    private float offset;
-
-    private float Velocity;
-
-    [SerializeField]
-    private float seconds;*/
+    private AnimationCurve curve;
     void Start()
     {
-        //startPos = transform.position;
-        //Velocity = offset / (50 * seconds);
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
-        transform.position = new Vector3(0, Mathf.PingPong(Time.time,3 ), 0);
-        Debug.Log(Mathf.PingPong(Time.time, 3f));
-        //if(transform.position.y > startPos.y + offset || transform.position.y < startPos.y)
-        //{
-        //    Velocity = -Velocity;
-        //}
+        float timeValue = curve.Evaluate((Mathf.PingPong(Time.time + yoffset,1)));
+        transform.position = new Vector3(xoffset, Mathf.PingPong(timeValue, 3), 0);
+        Debug.Log(timeValue);
     }
 }

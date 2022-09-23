@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementLerp : MonoBehaviour
-{
+{/*
     Vector3 startPos;
 
     [SerializeField]
@@ -12,21 +12,21 @@ public class MovementLerp : MonoBehaviour
     private float Velocity;
 
     [SerializeField]
-    private float seconds;
+    private float seconds;*/
     void Start()
     {
-        startPos = transform.position;
-        Velocity = offset / (50 * seconds);
+        //startPos = transform.position;
+        //Velocity = offset / (50 * seconds);
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //Debug.Log(transform.position);
-        transform.Translate(new Vector3(0, Velocity, 0));
-        if(transform.position.y > startPos.y + offset || transform.position.y < startPos.y)
-        {
-            Velocity = -Velocity;
-        }
+        transform.position = new Vector3(0, Mathf.PingPong(Time.time,3 ), 0);
+        Debug.Log(Mathf.PingPong(Time.time, 3f));
+        //if(transform.position.y > startPos.y + offset || transform.position.y < startPos.y)
+        //{
+        //    Velocity = -Velocity;
+        //}
     }
 }

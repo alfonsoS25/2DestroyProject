@@ -280,8 +280,11 @@ public class GameManager : MonoBehaviour
 
     private void gameOver()
     {
-        isDecided = true;
-        Instantiate(defeatMenu, uIRoot.transform.position, Quaternion.identity, uIRoot);
+        if (!isDecided)
+        {
+            isDecided = true;
+            Instantiate(defeatMenu, uIRoot.transform.position, Quaternion.identity, uIRoot);
+        }
     }
     private IEnumerator reloadScene()
     {
@@ -292,11 +295,14 @@ public class GameManager : MonoBehaviour
 
     private void gameClear()
     {
-        float Stars = 0;
-        Stars = pointManager.CalculateStarts();
-        Debug.Log(Stars);
-        isDecided = true;
-        Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity,uIRoot);
+        if (!isDecided)
+        {
+            float Stars = 0;
+            Stars = pointManager.CalculateStarts();
+            Debug.Log(Stars);
+            isDecided = true;
+            Instantiate(clearMenu, uIRoot.transform.position, Quaternion.identity, uIRoot);
+        }
     }
 
     private IEnumerator generateText(string textToShow,bool IsAttackNext)

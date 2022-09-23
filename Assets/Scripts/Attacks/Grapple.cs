@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class Grapple : MonoBehaviour
 {
-    private Vector3 hola;
     private Vector3 hola2;
+    private Vector3 hola;
+
+    [SerializeField]
+    private LayerMask layer;
+
+    private SliderJoint2D sliderjoint;
+
+    [SerializeField]
+    private GameObject equisde;
+
+    public JointMotor2D troleomaximo;
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 TouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        Vector3 pos = Camera.main.ScreenToWorldPoint(TouchPos);
-        Vector3 dir = Camera.main.ScreenToWorldPoint(TouchPos) - pos;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-
+        sliderjoint = gameObject.GetComponent<SliderJoint2D>();
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        worldPosition.z = 0;
+        hola2 = worldPosition - transform.position;
+        hola2.z = 0;
         hola = transform.position;
-        RaycastHit2D ray = Physics2D.Raycast(transform.position,transform.forward,Mathf.Infinity);
-        if (ray)
-        {
-            Debug.Log(ray.collider.name);
-            hola2 = ray.collider.transform.position;
-        }
+        Debug.DrawRay(hola, hola2);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, hola2, Mathf.Infinity,layer);
 
+        if(hit)
+        {
+            JointMotor2D motorero = new JointMotor2D { motorSpeed = 20, maxMotorTorque = 100 };
+
+            equisde = hit.collider.gameObject;
+            var troleo = equisde.AddComponent<SliderJoint2D>();
+            troleo.connectedBody = this.gameObject.GetComponent<Rigidbody2D>();
+            troleo.motor = motorero;
+            troleo.enableCollision = true;
+            troleo.useLimits = true;
+
+
+            //troleisimo.motor.motorSpeed = new JointMotor2D().motorSpeed;
+            //troleo.motor.motorSpeed = ;
+            //sliderjoint.connectedBody = equisde.GetComponent<Rigidbody2D>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hola);
-        Debug.Log(hola2);
-        Debug.DrawRay(hola, transform.forward*10);
     }
 }

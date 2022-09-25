@@ -11,9 +11,6 @@ public class MovementLerp : MonoBehaviour
 
     [SerializeField]
     private AnimationCurve curve;
-    void Start()
-    {
-    }
 
     private void FixedUpdate()
     {

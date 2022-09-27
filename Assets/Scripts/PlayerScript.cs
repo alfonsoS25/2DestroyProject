@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     private Animator _weaponBoxAnimator;
     [SerializeField]
     private GameObject _weaponBox;
+
     // Update is called once per frame
     private bool CheckDistance(Vector3 pressed)
     {
@@ -53,6 +54,13 @@ public class PlayerScript : MonoBehaviour
         }
         return isNear;
     }
+    private void Start()
+    {
+        Debug.Log(PlayerPrefs.GetInt("LastPower"));
+        Power = PlayerPrefs.GetInt("LastPower");
+        ChangePower(Power);
+    }
+
     void Update()
     {
         if (Input.touchCount>0)
@@ -75,12 +83,12 @@ public class PlayerScript : MonoBehaviour
         if (_playerWeapons[Power] != null)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = _playerWeapons[Power];
+            PlayerPrefs.SetInt("LastPower", Power);
         }
     }
 
     void attackMouse()
     {
-
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
@@ -135,9 +143,7 @@ public class PlayerScript : MonoBehaviour
                     break;
             }
         }
-
     }
-
     void AttackTouch()
     {
         delay = 0;
@@ -162,7 +168,6 @@ public class PlayerScript : MonoBehaviour
                     case 1:
                         var DestroyerLaser = Instantiate(Laser, transform.position, transform.rotation);
                         //DestroyerLaser.transform.position = new Vector3(transform.position.x + (transform.localScale.x / 2), transform.position.y, transform.position.z);
-
                         Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
                         Vector3 dir = Camera.main.ScreenToWorldPoint(touch.position) - pos;
                         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -184,7 +189,6 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-
     private void FixedUpdate()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);

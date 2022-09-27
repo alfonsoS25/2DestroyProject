@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         SelectingWeapon,
         onText,
         onTutorial,
+        onAnimation,
     }
 
 
@@ -124,6 +125,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("World" + randomnum2 + "/" + "Stage" + randomnum);
         var levelClone = Instantiate(Resources.Load<GameObject>("World" + randomnum2+ "/" + "Stage"+ randomnum), stagePos,Quaternion.identity,stageRoot);
         shootCounter.text = "shoots left: " + shootTries;
+        StartCoroutine(startOffset());
+    }
+
+    private IEnumerator startOffset()
+    {
+        gamestate = gameState.onAnimation;
+        yield return new WaitForSeconds(1);
+        gamestate = gameState.Ilde;
     }
     public void ReloadScene()
     {
@@ -161,6 +170,8 @@ public class GameManager : MonoBehaviour
                     break;
                 case gameState.onTutorial:
                     onTutorialPhase();
+                    break;
+                case gameState.onAnimation:;
                     break;
             }
         }
@@ -249,9 +260,7 @@ public class GameManager : MonoBehaviour
         counter += Time.deltaTime;
         if (counter > 0.3f)//3)
         {
-            
             gamestate = gameState.Ilde;
-            
             counter = 0;
             shootTries--;
             shootCounter.text = "shoots left: " + shootTries;

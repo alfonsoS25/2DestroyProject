@@ -9,16 +9,21 @@ public class AdsIntializer : MonoBehaviour, IUnityAdsInitializationListener, IUn
     string _gameId;
     [SerializeField] bool _testMode = true;
 
+    [SerializeField]
+    private bool _enableAds = true;
     private void Awake()
     {
-        if (Advertisement.isInitialized)
+        if (_enableAds)
         {
-            Debug.Log("Advertisement is Initialized");
-            LoadRewardedAd();
-        }
-        else
-        {
-            InitializeAds();
+            if (Advertisement.isInitialized)
+            {
+                Debug.Log("Advertisement is Initialized");
+                LoadRewardedAd();
+            }
+            else
+            {
+                InitializeAds();
+            }
         }
     }
     public void InitializeAds()
